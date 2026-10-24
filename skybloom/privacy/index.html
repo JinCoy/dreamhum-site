@@ -15,7 +15,7 @@
 <main>
 <article class="card">
   <h1>Skybloom Privacy Policy</h1>
-  <p class="meta"><strong>Test version.</strong> Effective date: 2026-10-22 · Last updated: 2026-10-22<br>
+  <p class="meta"><strong>Test version.</strong> Effective date: 2026-10-24 · Last updated: 2026-10-24<br>
   Publisher: Dreamhum, an individual developer in the Republic of Korea · Contact: <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a></p>
 
   <p class="note">This policy covers the <strong>test versions</strong> of Skybloom shared through Apple TestFlight and Google Play testing. Test versions show <strong>rewarded video ads from Google AdMob</strong> (test ads during testing), which you choose to watch for an in-game reward, and an optional <strong>account with cloud save</strong> (guest or Google sign-in, Section 2.2). They have <strong>no in-app purchases and no analytics services of our own</strong>. Before we add either, we will publish an updated policy here and ask for your consent where the law requires it.</p>
@@ -25,15 +25,16 @@
 
   <h2>2. Information the app handles</h2>
   <h3>2.1 Stored only on your device</h3>
-  <p>Your progress and settings (scores, gold, items, skins, collection, language, sound, tutorial status), a game in progress that is saved when you leave the app, the age group you chose, and a random guest identifier. This stays on your device. We do not receive it.</p>
+  <p>Your progress and settings (scores, gold, items, skins, collection, language, sound, tutorial status), a game in progress that is saved when you leave the app, the age group you chose, and a random guest identifier. This stays on your device. We do not receive it. If you chose "under 14" (or did not answer), <strong>everything</strong> stays on your device and Section 2.2 does not apply.</p>
 
   <h3>2.2 Account and cloud save (Google Firebase)</h3>
   <p>To keep your progress safe and let you continue on another device, the app uses Google Firebase, which we use as our server.</p>
   <ul>
-    <li><strong>Guest:</strong> when the app can reach our server, a guest gets an anonymous account with a random identifier. No name or email is involved.</li>
-    <li><strong>Google sign-in (optional, 14 and older):</strong> if you sign in with Google, Google shares with us your Google account identifier, email address, name and profile picture, and your guest progress moves to that account. We use your email only to show which account you are signed in with and to answer your requests. Apple sign-in, when added, works the same way, and Apple lets you hide your email. If you chose "under 14" (or did not answer), sign-in is not offered and you play as a guest.</li>
+    <li><strong>Guest (14 and older):</strong> when the app can reach our server, a guest gets an anonymous account with a random identifier. No name or email is involved.</li>
+    <li><strong>Google sign-in (optional, 14 and older):</strong> if you sign in with Google, Google shares with us your Google account identifier, email address, name and profile picture, and your guest progress moves to that account. We use your email only to show which account you are signed in with and to answer your requests. Apple sign-in, when added, works the same way, and Apple lets you hide your email. If you chose "under 14" (or did not answer), the app does not connect to our server: no account, no sign-in, no cloud save and no rankings.</li>
     <li><strong>Saved on our server:</strong> your collection (discovered items and treasures), equipped skins, Decorate layout, game settings, and when they were last updated. Gold is not sent; scores are sent only as game records for rankings (below).</li>
-    <li><strong>Rankings:</strong> when you finish a game with an account, the app sends the game (its random seed and your moves) to our server, which replays it to check the score. We keep a record of each game: score, highest building, number of moves, whether the score was verified, app version and time. Your best verified score and your collection count appear on <strong>public rankings</strong> (top 100, this week and all time), which other players can see, under a ranking name. <strong>Only accounts signed in with Google or Apple can choose a ranking name</strong> (1–16 characters); guests, including everyone who chose "under 14" or did not answer, always appear as "Anonymous". Please do not use your real name. Your age group is not sent to our server for this.</li>
+    <li><strong>Rankings:</strong> when you finish a game with an account, the app sends the game (its random seed and your moves) to our server, which replays it to check the score. We keep a record of each game: score, highest building, number of moves, whether the score was verified, app version and time. Your best verified score and your collection count appear on <strong>public rankings</strong> (top 100, this week and all time), which other players can see, under a ranking name. <strong>Only accounts signed in with Google or Apple can choose a ranking name</strong> (1–16 characters); guests always appear as "Anonymous". Players who chose "under 14" (or did not answer) are not on the rankings. Please do not use your real name. Your age group is not sent to our server for this. Weekly rankings older than the last 4 weeks and game records older than 90 days are deleted automatically (Section 5).</li>
+    <li><strong>Reporting a ranking name:</strong> any player with an account can report another player's ranking name. The name is hidden at once (it shows as "Anonymous") and that player may choose a new one; after 3 reports, the player can no longer set a ranking name. With the reported account we keep the reported name and the time of each report, <strong>not who reported it</strong>. To prevent misuse we keep, with the reporting account, a count of the reports it sent that day (up to 5 a day). Our server log keeps the reported account's identifier, the name and the number of reports for 30 days so that we can review reports.</li>
     <li>When you sign in or save, Firebase also receives your IP address and basic device and app information, which Google uses to run the service and keep accounts secure.</li>
   </ul>
   <p>Apart from this and ads (Section 2.3), the app does not send your game data. Its fonts and graphics are included in the app.</p>
@@ -83,6 +84,7 @@
     <tr><td>Run the game and keep your progress</td><td>Data stored on your device (2.1)</td></tr>
     <tr><td>Keep your account and back up your progress across devices</td><td>Account and saved progress (2.2)</td></tr>
     <tr><td>Check scores and show rankings</td><td>Game records, ranking name, best score and collection count (2.2)</td></tr>
+    <tr><td>Handle reports of offensive ranking names</td><td>Reported name, report time and counts (2.2)</td></tr>
     <tr><td>Show the ads you choose to watch and give their reward</td><td>Ad data handled by Google AdMob (2.3)</td></tr>
     <tr><td>Run the test and fix problems</td><td>Tester email, crash reports and feedback (2.5)</td></tr>
     <tr><td>Improve the game, only if you agree</td><td>Play-log files you send us (2.4)</td></tr>
@@ -104,7 +106,10 @@
   <div class="table-wrap"><table>
     <tr><th>Information</th><th>Kept</th></tr>
     <tr><td>Progress, settings, saved game, age group</td><td>On your device until you delete the app or its data</td></tr>
-    <tr><td>Game records and ranking entries</td><td>Until you delete your account (deleting it also removes you from every ranking)</td></tr>
+    <tr><td>Game records</td><td>90 days, then deleted automatically (or earlier if you delete your account)</td></tr>
+    <tr><td>Weekly rankings</td><td>This week and the 4 weeks before it; older weekly rankings are deleted automatically</td></tr>
+    <tr><td>All-time and collection ranking entries</td><td>Until you delete your account (deleting it also removes you from every ranking)</td></tr>
+    <tr><td>Name reports</td><td>With the reported account until it is deleted; the daily report count with the reporting account until it is deleted; server log entries 30 days</td></tr>
     <tr><td>Account and progress saved on our server</td><td>Until you delete your account. A guest account that is not used for 90 days is deleted automatically, with its saved progress; Google and Apple accounts are not</td></tr>
     <tr><td>Play log on your device</td><td>Until you delete it or delete the app</td></tr>
     <tr><td>Play-log files you send us</td><td>30 days after we receive them, then deleted</td></tr>
@@ -123,24 +128,25 @@
   </ul>
 
   <h2>7. Children</h2>
-  <p>If you choose "under 14" (or do not answer), the app does not record a play log or show surveys, does not offer Google or Apple sign-in (guest play only), does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
+  <p>If you choose "under 14" (or do not answer), the app <strong>does not connect to our server at all</strong>: no account (not even an anonymous guest account), no cloud save, no rankings, no Google or Apple sign-in. Everything stays on the device. The app also does not record a play log or show surveys, does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If an account was created on the device before this rule, it can still be deleted (Section 6). If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
 
   <h2>8. Security and transfers</h2>
   <p>Play-log files you send us are kept in access-restricted storage and deleted on schedule. Accounts and saved progress are protected by Firebase security rules, so only you can read or change your own data. No system is perfectly secure; if a breach creates a real risk of serious harm, we will tell the people affected and the authorities as the law requires. We are based in the Republic of Korea. Saved progress is stored by Google Firebase in Seoul; Google, Apple and their partners may process information in other countries.</p>
 
   <h2>9. Changes</h2>
-  <p>When this policy changes, we update the date above. In-app purchases will not be added until an updated policy is published here. Earlier versions: 2026-10-21 (ages 13 / 18, no accounts), 2026-10-20 (no ads).</p>
+  <p>When this policy changes, we update the date above. In-app purchases will not be added until an updated policy is published here. Earlier versions: 2026-10-22 (age groups under 14 / 14–17 / 18+, no accounts), 2026-10-21 (age groups under 13 / 13–17 / 18+, play log from 13), 2026-10-20 (no ads).</p>
 
   <h2>개인정보처리방침 요약 (한국어)</h2>
   <p>이 방침은 TestFlight와 Google Play 테스트로 배포하는 Skybloom <strong>테스트 버전</strong>에 적용됩니다. 테스트 버전에는 원할 때만 보는 <strong>Google AdMob 보상형 광고</strong>(테스트 중에는 테스트 광고)와 선택형 <strong>계정·클라우드 저장</strong>(게스트 또는 Google 로그인)이 있고, 인앱결제·자체 분석 서비스는 없습니다.</p>
   <ul>
     <li>게임 진행, 설정, 나가며 저장된 판, 고른 나이대는 기기에 저장됩니다.</li>
-    <li>진행 보관과 다른 기기에서 이어 하기를 위해 Google Firebase(서울 리전)를 서버로 씁니다. 게스트는 무작위 ID의 익명 계정이고, 만 14세 이상이 Google로 로그인하면 Google 계정 ID·이메일·이름·프로필 사진을 받습니다. 서버에는 도감(발견한 아이템·보물), 장착 스킨, 꾸미기 배치, 설정, 마지막 저장 시각만 저장하며 골드는 보내지 않습니다. 계정을 삭제할 때까지 보관하며, 90일 동안 쓰지 않은 게스트 계정은 저장된 진행과 함께 자동 삭제합니다(Google·Apple 계정은 제외). 만 14세 미만(또는 나이 미응답)은 로그인 없이 게스트로만 이용합니다.</li>
+    <li>진행 보관과 다른 기기에서 이어 하기를 위해 Google Firebase(서울 리전)를 서버로 씁니다. 만 14세 이상 게스트는 무작위 ID의 익명 계정이고, Google로 로그인하면 Google 계정 ID·이메일·이름·프로필 사진을 받습니다. 서버에는 도감(발견한 아이템·보물), 장착 스킨, 꾸미기 배치, 설정, 마지막 저장 시각만 저장하며 골드는 보내지 않습니다. 계정을 삭제할 때까지 보관하며, 90일 동안 쓰지 않은 게스트 계정은 저장된 진행과 함께 자동 삭제합니다(Google·Apple 계정은 제외). <strong>만 14세 미만(또는 나이 미응답)은 서버에 전혀 연결하지 않습니다.</strong> 계정(익명 포함)·클라우드 저장·랭킹·로그인 없이 모든 정보가 기기에만 남습니다.</li>
     <li>광고를 볼 때 Google이 IP 주소(대략적 위치 추정), 기기·앱 정보, 광고 이용 기록, 기기 식별자를 받아 광고 제공·측정·부정 방지에 씁니다. 저희는 광고 식별자를 받지 않습니다.</li>
     <li>18세 이상만 Google 동의 안내와 Apple 추적 허용 팝업을 봅니다. iPhone의 광고 식별자(IDFA)는 18세 이상이 "허용"을 누른 경우에만 전달됩니다. 18세 미만과 나이 미응답은 광고 요청에 미성년자·어린이 표시가 붙어 맞춤 광고에 쓰이지 않으며, 만 14세 미만·미응답은 전체 이용가 광고만 받습니다.</li>
     <li>만 18세 이상이 동의한 경우에만 플레이 기록이 기기에 남고, 직접 파일을 만들어 공유할 때만 저희에게 전달됩니다. 받은 파일은 30일 뒤 삭제합니다.</li>
     <li>추적은 iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 끌 수 있습니다.</li>
-    <li>랭킹: 계정으로 판을 끝내면 판의 시드와 수를 서버로 보내 점수를 다시 계산해 확인하고, 판마다 점수·최고 건물·수의 개수·확인 여부·앱 버전·시각을 저장합니다. 확인된 최고 점수와 도감 수는 랭킹 이름과 함께 <strong>다른 플레이어에게 공개되는 랭킹</strong>(주간·전체 상위 100)에 나옵니다. <strong>랭킹 이름은 Google·Apple로 로그인한 계정만 정할 수 있고</strong>(1~16자), 게스트(만 14세 미만·나이 미응답 포함)는 항상 "익명"으로 표시됩니다. 실명은 쓰지 마세요. 이를 위해 나이대를 서버로 보내지 않습니다. 계정을 삭제하면 모든 랭킹에서 지워집니다.</li>
+    <li>랭킹: 계정으로 판을 끝내면 판의 시드와 수를 서버로 보내 점수를 다시 계산해 확인하고, 판마다 점수·최고 건물·수의 개수·확인 여부·앱 버전·시각을 저장합니다. 확인된 최고 점수와 도감 수는 랭킹 이름과 함께 <strong>다른 플레이어에게 공개되는 랭킹</strong>(주간·전체 상위 100)에 나옵니다. <strong>랭킹 이름은 Google·Apple로 로그인한 계정만 정할 수 있고</strong>(1~16자), 게스트는 항상 "익명"으로 표시되며, 만 14세 미만·나이 미응답은 랭킹에 나오지 않습니다. 실명은 쓰지 마세요. 이를 위해 나이대를 서버로 보내지 않습니다. 게임 기록은 90일, 주간 랭킹은 이번 주와 그 전 4주까지만 보관하고 자동 삭제합니다. 계정을 삭제하면 모든 랭킹에서 지워집니다.</li>
+    <li>랭킹 이름 신고: 계정이 있는 플레이어는 다른 사람의 랭킹 이름을 신고할 수 있습니다. 신고된 이름은 바로 "익명"으로 가려지고, 3회 신고되면 더 이상 이름을 정할 수 없습니다. 신고된 계정에는 신고된 이름과 시각만 저장하고 <strong>신고한 사람은 저장하지 않습니다</strong>. 남용을 막기 위해 신고한 계정에 그날의 신고 횟수(하루 5회까지)를 저장하고, 검토를 위해 서버 로그에 신고된 계정 ID·이름·신고 횟수를 30일간 남깁니다.</li>
     <li>계정 삭제: 앱 <strong>설정 → 계정·데이터 삭제</strong>, 또는 Google 계정은 <a href="https://jincoy.github.io/skybloom-prototype/delete-account.html">웹 삭제 페이지</a>. 앱만 지우면 서버의 계정·진행은 남습니다.</li>
     <li>삭제·문의: <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> (30일 안에 처리)</li>
   </ul>
