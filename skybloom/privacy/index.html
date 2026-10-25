@@ -25,7 +25,7 @@
 
   <h2>2. Information the app handles</h2>
   <h3>2.1 Stored only on your device</h3>
-  <p>Your progress and settings (scores, gold, items, skins, collection, language, sound, tutorial status), a game in progress that is saved when you leave the app, the age group you chose, and a random guest identifier. This stays on your device. We do not receive it. If you chose "under 14" (or did not answer), <strong>everything</strong> stays on your device and Section 2.2 does not apply.</p>
+  <p>Your progress and settings (scores, gold, items, skins, collection, language, sound, tutorial status), a game in progress that is saved when you leave the app, a history of your last 20 finished games (for each game: its random seed and starting board, your moves, the final score, highest building and gold, its length, how it ended, and the app version and time; no name, email or account identifier), the age group you chose, and a random guest identifier. The game history is kept for every age group; a new game replaces the oldest one after 20. This stays on your device. We do not receive it. If you chose "under 14" (or did not answer), <strong>everything</strong> stays on your device and Section 2.2 does not apply.</p>
 
   <h3>2.2 Account and cloud save (Google Firebase)</h3>
   <p>To keep your progress safe and let you continue on another device, the app uses Google Firebase, which we use as our server.</p>
@@ -61,11 +61,11 @@
   <ul>
     <li><strong>iPhone:</strong> your advertising identifier (IDFA) is shared with Google only if you are 18 or older and choose "Allow" in Apple's tracking prompt.</li>
     <li><strong>Android:</strong> Google's software in the app can read the device advertising ID. For players under 18 or who did not answer, every ad request carries the markings above, and under Google's policies such requests are not used for personalized advertising or remarketing.</li>
-    <li>If you decline consent or tracking, you still get the same rewards; ads are then non-personalized or limited.</li>
+    <li>Declining consent or tracking does not change the reward for an ad you watch; ads are then non-personalized or limited. You get a reward only when an ad is shown to the end. If no ad can be shown (for example, offline or none available), there is no reward that time and you can try again later.</li>
   </ul>
 
   <h3>2.4 Optional play log (18 and older)</h3>
-  <p>If you are 18 or older, the app may ask whether you want to join a play test. <strong>Nothing is recorded before you say yes.</strong> If you agree, the app records on your device:</p>
+  <p>If you are 18 or older, the app may ask whether you want to join a play test. <strong>Nothing is recorded for the play log before you say yes.</strong> (The game history in Section 2.1 is separate and is kept on your device either way.) If you agree, the app records on your device:</p>
   <ul>
     <li>your taps and moves in the game, time on each screen, scores, items, and ads shown;</li>
     <li>your device situation: platform, operating-system type and major version, app type and version, screen size, language, time zone, memory class, number of processor cores, orientation, and whether reduced motion is on;</li>
@@ -109,6 +109,7 @@
   <div class="table-wrap"><table>
     <tr><th>Information</th><th>Kept</th></tr>
     <tr><td>Progress, settings, saved game, age group</td><td>On your device until you delete the app or its data</td></tr>
+    <tr><td>Game history (last 20 games)</td><td>On your device; the oldest game is replaced after 20. Removed when you delete the app or its data, or delete your account</td></tr>
     <tr><td>Game records</td><td>90 days, then deleted automatically (or earlier if you delete your account)</td></tr>
     <tr><td>Weekly rankings</td><td>This week and the 4 weeks before it; older weekly rankings are deleted automatically</td></tr>
     <tr><td>All-time and collection ranking entries</td><td>Until you delete your account (deleting it also removes you from every ranking)</td></tr>
@@ -131,7 +132,7 @@
   </ul>
 
   <h2>7. Children</h2>
-  <p>If you choose "under 14" (or do not answer), the app <strong>does not connect to our server at all</strong>: no account (not even an anonymous guest account), no cloud save, no rankings, no Google or Apple sign-in. Everything stays on the device. The app also does not record a play log or show surveys, does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If an account was created on the device before this rule, it can still be deleted (Section 6). If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
+  <p>If you choose "under 14" (or do not answer), the app <strong>does not connect to our server at all</strong>: no account (not even an anonymous guest account), no cloud save, no rankings, no Google or Apple sign-in. Everything stays on the device. The app keeps only the on-device game history of Section 2.1 (last 20 games), which is never sent to us for players under 14. It does not record the optional play log, does not show surveys, does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If an account was created on the device before this rule, it can still be deleted (Section 6). If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
 
   <h2>8. Security and transfers</h2>
   <p>Play-log files you send us are kept in access-restricted storage and deleted on schedule. Accounts and saved progress are protected by Firebase security rules, so only you can read or change your own data. No system is perfectly secure; if a breach creates a real risk of serious harm, we will tell the people affected and the authorities as the law requires. We are based in the Republic of Korea. Saved progress is stored by Google Firebase in Seoul; Google, Apple and their partners may process information in other countries.</p>
@@ -142,9 +143,9 @@
   <h2>개인정보처리방침 요약 (한국어)</h2>
   <p>이 방침은 TestFlight와 Google Play 테스트로 배포하는 Skybloom <strong>테스트 버전</strong>에 적용됩니다. 테스트 버전에는 원할 때만 보는 <strong>Google AdMob 보상형 광고</strong>(테스트 중에는 테스트 광고)와 선택형 <strong>계정·클라우드 저장</strong>(게스트, Google 로그인 또는 Apple로 로그인)이 있고, 인앱결제·자체 분석 서비스는 없습니다.</p>
   <ul>
-    <li>게임 진행, 설정, 나가며 저장된 판, 고른 나이대는 기기에 저장됩니다.</li>
+    <li>게임 진행, 설정, 나가며 저장된 판, 고른 나이대, <strong>최근 20판 기록</strong>(판마다 시드·시작 판, 내 수, 최종 점수·최고 건물·골드, 걸린 시간, 끝난 방식, 앱 버전·시각. 이름·이메일·계정 ID 없음)은 기기에 저장됩니다. 판 기록은 모든 연령에서 저장되고, 20판이 넘으면 가장 오래된 판부터 지워집니다. 만 14세 미만은 이 기록도 저희에게 보내지 않습니다.</li>
     <li>진행 보관과 다른 기기에서 이어 하기를 위해 Google Firebase(서울 리전)를 서버로 씁니다. 만 14세 이상 게스트는 무작위 ID의 익명 계정이고, Google로 로그인하면 Google 계정 ID·이메일·이름·프로필 사진을 받습니다. Apple로 로그인하면(iPhone·iPad·웹, Android 앱에는 없음) Apple 계정 ID와 이메일을 받고, 이메일 가리기를 고르면 Apple이 전달해 주는 대리 주소를 받습니다. 이름은 처음 로그인할 때 공유를 고른 경우에만 받고, 프로필 사진은 받지 않습니다. 서버에는 도감(발견한 아이템·보물), 장착 스킨, 꾸미기 배치, 설정, 마지막 저장 시각만 저장하며 골드는 보내지 않습니다. 계정을 삭제할 때까지 보관하며, 90일 동안 쓰지 않은 게스트 계정은 저장된 진행과 함께 자동 삭제합니다(Google·Apple 계정은 제외). <strong>만 14세 미만(또는 나이 미응답)은 서버에 전혀 연결하지 않습니다.</strong> 계정(익명 포함)·클라우드 저장·랭킹·로그인 없이 모든 정보가 기기에만 남습니다.</li>
-    <li>광고를 볼 때 Google이 IP 주소(대략적 위치 추정), 기기·앱 정보, 광고 이용 기록, 기기 식별자를 받아 광고 제공·측정·부정 방지에 씁니다. 저희는 광고 식별자를 받지 않습니다.</li>
+    <li>광고를 볼 때 Google이 IP 주소(대략적 위치 추정), 기기·앱 정보, 광고 이용 기록, 기기 식별자를 받아 광고 제공·측정·부정 방지에 씁니다. 저희는 광고 식별자를 받지 않습니다. 동의나 추적을 거절해도 본 광고의 보상은 같습니다. 보상은 광고가 끝까지 나왔을 때만 받고, 광고를 불러오지 못하면(오프라인 등) 그때는 보상이 없습니다.</li>
     <li>18세 이상만 Google 동의 안내와 Apple 추적 허용 팝업을 봅니다. iPhone의 광고 식별자(IDFA)는 18세 이상이 "허용"을 누른 경우에만 전달됩니다. 18세 미만과 나이 미응답은 광고 요청에 미성년자·어린이 표시가 붙어 맞춤 광고에 쓰이지 않으며, 만 14세 미만·미응답은 전체 이용가 광고만 받습니다.</li>
     <li>만 18세 이상이 동의한 경우에만 플레이 기록이 기기에 남고, 직접 파일을 만들어 공유할 때만 저희에게 전달됩니다. 받은 파일은 30일 뒤 삭제합니다.</li>
     <li>추적은 iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 끌 수 있습니다.</li>
