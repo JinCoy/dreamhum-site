@@ -55,7 +55,7 @@
     <tr><th></th><th>18 or older</th><th>14–17</th><th>Under 14, or not answered</th></tr>
     <tr><td>Google's consent message (in regions that require it)</td><td>Shown</td><td>Not shown</td><td>Not shown</td></tr>
     <tr><td>Apple's tracking permission prompt (iPhone)</td><td>Shown</td><td>Not shown</td><td>Not shown</td></tr>
-    <tr><td>Ad requests are marked as</td><td>—</td><td>Under the age of consent</td><td>Directed to children and under the age of consent</td></tr>
+    <tr><td>Ad requests are marked as</td><td>—</td><td>Child age treatment (Google's setting for young users)</td><td>Child age treatment and directed to children</td></tr>
     <tr><td>Highest ad content rating</td><td>Teen</td><td>Parental guidance</td><td>General audiences</td></tr>
   </table></div>
   <ul>
@@ -146,7 +146,7 @@
     <li>게임 진행, 설정, 나가며 저장된 판, 고른 나이대, <strong>최근 20판 기록</strong>(판마다 시드·시작 판, 내 수, 최종 점수·최고 건물·골드, 걸린 시간, 끝난 방식, 앱 버전·시각. 이름·이메일·계정 ID 없음)은 기기에 저장됩니다. 판 기록은 모든 연령에서 저장되고, 20판이 넘으면 가장 오래된 판부터 지워집니다. 만 14세 미만은 이 기록도 저희에게 보내지 않습니다.</li>
     <li>진행 보관과 다른 기기에서 이어 하기를 위해 Google Firebase(서울 리전)를 서버로 씁니다. 만 14세 이상 게스트는 무작위 ID의 익명 계정이고, Google로 로그인하면 Google 계정 ID·이메일·이름·프로필 사진을 받습니다. Apple로 로그인하면(iPhone·iPad와 웹 계정 삭제 페이지, Android 앱에는 없음) Apple 계정 ID와 이메일을 받고, 이메일 가리기를 고르면 Apple이 전달해 주는 대리 주소를 받습니다. 이름은 처음 로그인할 때 공유를 고른 경우에만 받고, 프로필 사진은 받지 않습니다. 서버에는 도감(발견한 아이템·보물), 장착 스킨, 꾸미기 배치, 설정, 마지막 저장 시각만 저장하며 골드는 보내지 않습니다. 계정을 삭제할 때까지 보관하며, 90일 동안 쓰지 않은 게스트 계정은 저장된 진행과 함께 자동 삭제합니다(Google·Apple 계정은 제외). <strong>만 14세 미만(또는 나이 미응답)은 서버에 전혀 연결하지 않습니다.</strong> 계정(익명 포함)·클라우드 저장·랭킹·로그인 없이 모든 정보가 기기에만 남습니다.</li>
     <li>광고를 볼 때 Google이 IP 주소(대략적 위치 추정), 기기·앱 정보, 광고 이용 기록, 기기 식별자를 받아 광고 제공·측정·부정 방지에 씁니다. 저희는 광고 식별자를 받지 않습니다. 동의나 추적을 거절해도 본 광고의 보상은 같습니다. 보상은 광고가 끝까지 나왔을 때만 받고, 광고를 불러오지 못하면(오프라인 등) 그때는 보상이 없습니다.</li>
-    <li>18세 이상만 Google 동의 안내와 Apple 추적 허용 팝업을 봅니다. iPhone의 광고 식별자(IDFA)는 18세 이상이 "허용"을 누른 경우에만 전달됩니다. 18세 미만과 나이 미응답은 광고 요청에 미성년자·어린이 표시가 붙어 맞춤 광고에 쓰이지 않으며, 만 14세 미만·미응답은 전체 이용가 광고만 받습니다.</li>
+    <li>18세 이상만 Google 동의 안내와 Apple 추적 허용 팝업을 봅니다. iPhone의 광고 식별자(IDFA)는 18세 이상이 "허용"을 누른 경우에만 전달됩니다. 18세 미만과 나이 미응답은 광고 요청에 Google의 어린이 연령 처리 표시가 붙고(만 14세 미만·미응답은 '어린이 대상' 표시도 함께) Google 정책에 따라 맞춤 광고에 쓰이지 않으며, 만 14세 미만·미응답은 전체 이용가 광고만 받습니다.</li>
     <li>만 18세 이상이 동의한 경우에만 플레이 기록이 기기에 남고, 직접 파일을 만들어 공유할 때만 저희에게 전달됩니다. 플레이 테스트에 참여하지 않은 18세 이상도 설정 → 플레이 기록 보내기에서 최근 20판 기록 파일을 만들 수 있고, 이 파일도 직접 공유할 때만 전달됩니다. 받은 파일은 30일 뒤 삭제합니다.</li>
     <li>추적은 iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 끌 수 있습니다.</li>
     <li>랭킹: 계정으로 판을 끝내면 판의 시드와 수를 서버로 보내 점수를 다시 계산해 확인하고, 판마다 점수·최고 건물·수의 개수·확인 여부·앱 버전·시각을 저장합니다. 확인된 최고 점수와 도감 수는 랭킹 이름과 함께 <strong>다른 플레이어에게 공개되는 랭킹</strong>(주간·전체 상위 100)에 나옵니다. <strong>랭킹 이름은 Google·Apple로 로그인한 계정만 정할 수 있고</strong>(1~16자), 게스트는 항상 "익명"으로 표시되며, 만 14세 미만·나이 미응답은 랭킹에 나오지 않습니다. 실명은 쓰지 마세요. 이를 위해 나이대를 서버로 보내지 않습니다. 게임 기록은 90일, 주간 랭킹은 이번 주와 그 전 4주까지만 보관하고 자동 삭제합니다. 계정을 삭제하면 모든 랭킹에서 지워집니다.</li>
