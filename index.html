@@ -8,6 +8,9 @@
 <meta property="og:title" content="Skybloom: Sky Garden Merge Puzzle">
 <meta property="og:description" content="Place, merge, and grow a glass garden in the sky. Coming November 20, 2026.">
 <meta property="og:image" content="https://dreamhum.com/assets/brand/game-mid-1080.webp">
+<link rel="alternate" hreflang="en" href="https://dreamhum.com/">
+<link rel="alternate" hreflang="ko" href="https://dreamhum.com/ko/">
+<link rel="alternate" hreflang="x-default" href="https://dreamhum.com/">
 <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preload" href="/assets/brand/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -108,6 +111,8 @@ footer { margin-top: clamp(80px, 10vw, 120px); border-top: 1px solid var(--line)
 footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; }
 footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 footer a { text-decoration: none; }
+.lang { display: flex; gap: 10px; align-items: center; }
+.lang [aria-current] { color: var(--ink); font-weight: 900; }
 footer a:hover { color: var(--ink); text-decoration: underline; }
 
 
@@ -468,6 +473,7 @@ form .btn[disabled] { opacity: .6; cursor: wait; }
 <footer>
   <div class="wrap">
     <span>© 2026 Dreamhum</span>
+    <nav class="lang" aria-label="Language"><a href="/" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/ko/" lang="ko">한국어</a></nav>
     <nav aria-label="Footer">
       <a href="https://www.instagram.com/skybloom_mobile/">Instagram</a>
       <a href="/skybloom/privacy/">Privacy</a>
