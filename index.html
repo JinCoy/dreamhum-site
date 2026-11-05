@@ -110,12 +110,91 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 footer a { text-decoration: none; }
 footer a:hover { color: var(--ink); text-decoration: underline; }
 
+
+.sub { margin-top: 12px; max-width: 60ch; color: var(--ink-soft); font-size: 19px; }
+
+/* buildings: one ladder you can scroll sideways */
+.ladder { margin-top: 32px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding: 8px 0 18px; }
+.ladder ol { list-style: none; margin: 0; display: flex; gap: 14px; padding-inline: max(var(--gutter), calc((100vw - 1200px) / 2 + var(--gutter))); width: max-content; }
+.ladder li { scroll-snap-align: start; position: relative; width: 168px; padding: 18px 14px 16px; border-radius: 28px; background: linear-gradient(180deg, #e3f3fe, var(--soft)); text-align: center; }
+.ladder img { width: 120px; height: 120px; object-fit: contain; margin: 0 auto; }
+.ladder .lv { top: 12px; left: 12px; right: auto; bottom: auto; }
+.nm { display: block; margin-top: 10px; font-size: 16px; font-weight: 900; line-height: 1.25; }
+
+/* skins: tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.tabs button { font: inherit; font-size: 16px; font-weight: 900; color: var(--ink); background: #fff; border: 2px solid var(--line); border-radius: 100px; padding: 10px 18px; cursor: pointer; }
+.tabs button span { color: var(--ink-soft); font-weight: 800; margin-left: 4px; }
+.tabs button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.tabs button[aria-selected="true"] span { color: #c9d8f2; }
+.panel { margin-top: 24px; }
+.g { list-style: none; padding: 0; display: grid; gap: 16px; }
+.g b { display: block; font-size: 17px; font-weight: 900; line-height: 1.3; margin-top: 10px; }
+.g small { display: block; font-size: 14px; color: var(--ink-soft); font-weight: 800; }
+.sets { grid-template-columns: repeat(3, 1fr); }
+.set { padding: 18px 18px 20px; border-radius: 28px; background: var(--soft); }
+.set .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; align-items: end; }
+.set .row img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.skies { grid-template-columns: repeat(6, 1fr); }
+.sky img { width: 100%; border-radius: 22px; aspect-ratio: 4 / 5; object-fit: cover; }
+.tiles { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.tl { padding: 16px 12px 14px; border-radius: 24px; background: var(--soft); text-align: center; }
+.tl img { width: 100%; max-width: 120px; height: 90px; object-fit: contain; margin: 0 auto; }
+
+/* collection: five shown, the rest kept secret */
+.treasures { list-style: none; padding: 0; margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.tr { position: relative; padding: 16px 12px 14px; border-radius: 24px; text-align: center; background: linear-gradient(180deg, #e9f6ff, #fff); border: 1px solid var(--line); }
+.tr img { width: 100px; height: 100px; object-fit: contain; margin: 0 auto; }
+.tr b { display: block; margin-top: 8px; font-size: 15px; font-weight: 900; line-height: 1.25; }
+.rar { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 100px; font-size: 12px; font-weight: 900; color: #fff; background: #3b7fe0; }
+.R .rar { background: #8a5ad8; }
+.L .rar { background: linear-gradient(#f6c74e, #e39a1d); color: var(--gold-ink); }
+.rar.ghost { visibility: hidden; }
+.tr.hid { background: linear-gradient(180deg, #1d3d7a, #12326e); border-color: #2c5194; }
+.tr.hid img { opacity: .9; }
+.tr.hid b { color: var(--gold); font-size: 22px; letter-spacing: .08em; text-shadow: 0 0 12px rgba(249,203,78,.7); }
+.tr.hid.L { box-shadow: 0 0 0 2px rgba(249,203,78,.55), 0 10px 26px rgba(227,154,29,.25); }
+
+/* ranking: a sky band again, glass cards on it */
+.rank { border-radius: 40px; padding: clamp(28px, 6vw, 64px); background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 70%, var(--sky-3)); }
+.rank .sub { color: var(--ink); }
+.boards { list-style: none; padding: 0; margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.boards li { padding: 24px; border-radius: 28px; background: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.95); box-shadow: inset 0 1px 0 #fff, 0 10px 30px rgba(18,50,110,.12); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.boards svg, .play svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.boards h3 { margin-top: 10px; font-size: 22px; font-weight: 900; }
+.boards p { margin-top: 4px; font-size: 16px; color: var(--ink-soft); }
+.facts { margin-top: 22px; padding-left: 20px; font-size: 16px; color: var(--ink); display: grid; gap: 6px; }
+
+/* sound */
+.sound { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+.play { display: inline-flex; align-items: center; gap: 12px; font: inherit; font-size: 18px; font-weight: 900; color: var(--ink); background: var(--soft); border: 2px solid var(--line); border-radius: 100px; padding: 12px 24px 12px 14px; cursor: pointer; }
+.play svg { width: 28px; height: 28px; padding: 6px; box-sizing: content-box; border-radius: 50%; color: #fff; background: linear-gradient(var(--leaf-1), var(--leaf-2)); }
+.i-pause, .play[aria-pressed="true"] .i-play { display: none; }
+.play[aria-pressed="true"] .i-pause { display: inline; }
+
+/* join */
+.join { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); padding: clamp(28px, 5vw, 56px); border-radius: 40px; background: var(--soft); }
+form { display: grid; gap: 14px; }
+form label { display: grid; gap: 6px; font-size: 16px; font-weight: 900; }
+form input:not([type="checkbox"]) { font: inherit; font-weight: 700; font-size: 17px; color: var(--ink); padding: 12px 16px; border-radius: 16px; border: 2px solid var(--line); background: #fff; }
+form input:focus-visible { outline: 3px solid var(--sky-1); outline-offset: 1px; border-color: var(--sky-1); }
+.ck { display: flex !important; grid-template-columns: none; align-items: flex-start; gap: 10px !important; font-weight: 700 !important; color: var(--ink-soft); }
+.ck input { width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--leaf-2); flex: none; }
+.hp { position: absolute; left: -9999px; }
+form .btn { justify-self: start; border: 0; cursor: pointer; font-family: inherit; }
+form .btn[disabled] { opacity: .6; cursor: wait; }
+.msg { min-height: 1.6em; font-size: 16px; }
+.msg.ok { color: #1f7a27; }
+.msg.err { color: #b3261e; }
+
 @media (max-width: 900px) {
+  .sets { grid-template-columns: 1fr 1fr; } .skies { grid-template-columns: repeat(3, 1fr); } .boards, .join, .sound { grid-template-columns: 1fr; }
   .hero-in { grid-template-columns: 1fr; text-align: left; }
   .screen { width: min(300px, 100%); }
   .intro, .steps, .items { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
+  .sets { grid-template-columns: 1fr; } .skies { grid-template-columns: 1fr 1fr; } .treasures { grid-template-columns: repeat(2, 1fr); } .ladder li { width: 148px; }
   .top nav a:not(.btn) { display: none; }
   .hero { border-radius: 32px; }
   .hero .c1 { width: 110px; left: 60%; }
@@ -171,7 +250,7 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
       <div>
         <p>Skybloom is a merge puzzle set on a floating island. Its look is futuristic Frutiger Aero and dreamcore: bright sky, glass, water and soft light.</p>
         <p>Unlock 17 buildings, find treasures inside floating bubbles, and dress your garden with new boards, skies and building sets.</p>
-        <p>The music and sound are original, made for the game.</p>
+        <p>The music is original, composed for the game.</p>
       </div>
     </div>
   </section>
@@ -220,6 +299,170 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
       <p class="rule">A 4×4 board and 17 building levels. The game ends when there is no empty tile and nothing can merge.</p>
     </div>
   </section>
+  <section id="buildings">
+    <div class="wrap">
+      <h2>17 buildings to grow</h2>
+      <p class="sub">Every merge climbs one step up the ladder, from a single dew drop to the Skybloom Tree.</p>
+    </div>
+    <div class="ladder" role="region" aria-label="The 17 Classic Glass buildings, in order" tabindex="0">
+      <ol>
+        <li><img src="/assets/brand/g/lad-01.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">1</span><span class="nm">Dew Drop</span></li>
+        <li><img src="/assets/brand/g/lad-02.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">2</span><span class="nm">Sprout</span></li>
+        <li><img src="/assets/brand/g/lad-03.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">3</span><span class="nm">Lily Bloom</span></li>
+        <li><img src="/assets/brand/g/lad-04.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">4</span><span class="nm">Glass Planter</span></li>
+        <li><img src="/assets/brand/g/lad-05.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">5</span><span class="nm">Bubble Fountain</span></li>
+        <li><img src="/assets/brand/g/lad-06.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">6</span><span class="nm">Breeze Windmill</span></li>
+        <li><img src="/assets/brand/g/lad-07.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">7</span><span class="nm">Glass Greenhouse</span></li>
+        <li><img src="/assets/brand/g/lad-08.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">8</span><span class="nm">Aqua Pavilion</span></li>
+        <li><img src="/assets/brand/g/lad-09.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">9</span><span class="nm">Solar Dome</span></li>
+        <li><img src="/assets/brand/g/lad-10.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">10</span><span class="nm">Waterfall Garden</span></li>
+        <li><img src="/assets/brand/g/lad-11.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">11</span><span class="nm">Crystal Tower</span></li>
+        <li><img src="/assets/brand/g/lad-12.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">12</span><span class="nm">Sky Dome</span></li>
+        <li><img src="/assets/brand/g/lad-13.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">13</span><span class="nm">Rainbow Bridge</span></li>
+        <li><img src="/assets/brand/g/lad-14.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">14</span><span class="nm">Cloud Harbor</span></li>
+        <li><img src="/assets/brand/g/lad-15.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">15</span><span class="nm">Star Observatory</span></li>
+        <li><img src="/assets/brand/g/lad-16.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">16</span><span class="nm">Aurora Palace</span></li>
+        <li><img src="/assets/brand/g/lad-17.webp" width="220" height="220" loading="lazy" alt=""><span class="lv">17</span><span class="nm">Skybloom Tree</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="skins">
+    <div class="wrap">
+      <h2>Make the garden yours</h2>
+      <p class="sub">Swap the buildings, the sky, the board and even the bubbles. Each set gives all 17 buildings a new look.</p>
+      <div class="tabs" role="tablist" aria-label="Skin types">
+        <button role="tab" id="t-sets" aria-controls="p-sets" aria-selected="true">Building sets <span>6</span></button>
+        <button role="tab" id="t-skies" aria-controls="p-skies" aria-selected="false" tabindex="-1">Skies <span>6</span></button>
+        <button role="tab" id="t-tiles" aria-controls="p-tiles" aria-selected="false" tabindex="-1">Boards <span>11</span></button>
+        <button role="tab" id="t-bubs" aria-controls="p-bubs" aria-selected="false" tabindex="-1">Bubbles <span>8</span></button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-sets" aria-labelledby="t-sets"><ul class="g sets">
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-classic-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Classic Glass</b><small>Default</small></li>
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-candy-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Candy Glass</b></li>
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-eco-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Eco Campus</b></li>
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-aqua-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Aqua Gadget</b></li>
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-poolhouse-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Pastel Poolhouse</b></li>
+          <li class="set"><div class="row"><img src="/assets/brand/g/set-reverie-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Reverie Village</b></li>
+        </ul></div>
+      <div class="panel" role="tabpanel" id="p-skies" aria-labelledby="t-skies" hidden><ul class="g skies">
+          <li class="sky"><img src="/assets/brand/g/sky-day.webp" width="400" height="500" loading="lazy" alt=""><b>Sky Island</b><small>Default</small></li>
+          <li class="sky"><img src="/assets/brand/g/sky-blossom.webp" width="400" height="500" loading="lazy" alt=""><b>Blossom Island</b></li>
+          <li class="sky"><img src="/assets/brand/g/sky-aurora.webp" width="400" height="500" loading="lazy" alt=""><b>Aurora Sky</b></li>
+          <li class="sky"><img src="/assets/brand/g/sky-meadow.webp" width="400" height="500" loading="lazy" alt=""><b>Bliss Meadow</b></li>
+          <li class="sky"><img src="/assets/brand/g/sky-poolrooms.webp" width="400" height="500" loading="lazy" alt=""><b>Pastel Poolrooms</b></li>
+          <li class="sky"><img src="/assets/brand/g/sky-bedroom.webp" width="400" height="500" loading="lazy" alt=""><b>Aqua Bedroom</b></li>
+        </ul></div>
+      <div class="panel" role="tabpanel" id="p-tiles" aria-labelledby="t-tiles" hidden><ul class="g tiles">
+          <li class="tl"><img src="/assets/brand/g/tile-frost.webp" width="200" height="113" loading="lazy" alt=""><b>Frosted Glass</b><small>Default</small></li>
+          <li class="tl"><img src="/assets/brand/g/tile-petal.webp" width="200" height="113" loading="lazy" alt=""><b>Petal Tiles</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-star.webp" width="200" height="113" loading="lazy" alt=""><b>Starlight Tiles</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-lime.webp" width="200" height="113" loading="lazy" alt=""><b>Lime Jelly</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-tangerine.webp" width="200" height="113" loading="lazy" alt=""><b>Tangerine Gel</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-grape.webp" width="200" height="113" loading="lazy" alt=""><b>Grape Console</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-luna.webp" width="200" height="113" loading="lazy" alt=""><b>Luna Blue</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-opal.webp" width="200" height="113" loading="lazy" alt=""><b>Opal Mystic</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-oyster.webp" width="200" height="113" loading="lazy" alt=""><b>Oyster Porcelain</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-fog.webp" width="200" height="113" loading="lazy" alt=""><b>Fog Limestone</b></li>
+          <li class="tl"><img src="/assets/brand/g/tile-smoke.webp" width="200" height="113" loading="lazy" alt=""><b>Smoke Glass</b></li>
+        </ul></div>
+      <div class="panel" role="tabpanel" id="p-bubs" aria-labelledby="t-bubs" hidden><ul class="g tiles">
+          <li class="tl"><img src="/assets/brand/g/bub-rainbow.webp" width="160" height="160" loading="lazy" alt=""><b>Rainbow</b><small>Default</small></li>
+          <li class="tl"><img src="/assets/brand/g/bub-pearl.webp" width="160" height="160" loading="lazy" alt=""><b>Pearl</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-mint.webp" width="160" height="160" loading="lazy" alt=""><b>Mint</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-lime.webp" width="160" height="160" loading="lazy" alt=""><b>Lime Slime</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-tangerine.webp" width="160" height="160" loading="lazy" alt=""><b>Tangerine Gel</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-grape.webp" width="160" height="160" loading="lazy" alt=""><b>Grape Console</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-luna.webp" width="160" height="160" loading="lazy" alt=""><b>Luna Blue</b></li>
+          <li class="tl"><img src="/assets/brand/g/bub-opal.webp" width="160" height="160" loading="lazy" alt=""><b>Opal Mystic</b></li>
+        </ul></div>
+    </div>
+  </section>
+
+  <section id="collection">
+    <div class="wrap">
+      <h2>22 treasures hide in the bubbles</h2>
+      <p class="sub">Pop pink bubbles to find them. Five are shown here; the rest are waiting in the sky.</p>
+      <ul class="treasures">
+        <li class="tr C"><img src="/assets/brand/g/tr-01.webp" width="180" height="180" loading="lazy" alt=""><b>Glass Marble</b><span class="rar">Common</span></li>
+        <li class="tr C"><img src="/assets/brand/g/tr-02.webp" width="180" height="180" loading="lazy" alt=""><b>Paper Boat</b><span class="rar">Common</span></li>
+        <li class="tr C"><img src="/assets/brand/g/tr-03.webp" width="180" height="180" loading="lazy" alt=""><b>Dandelion Puff</b><span class="rar">Common</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-04.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-05.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-06.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr R"><img src="/assets/brand/g/tr-07.webp" width="180" height="180" loading="lazy" alt=""><b>Glass Butterfly</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-08.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-09.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-10.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid L"><img src="/assets/brand/g/tr-11.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Legendary</span></li>
+        <li class="tr hid L"><img src="/assets/brand/g/tr-12.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Legendary</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-13.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr C"><img src="/assets/brand/g/tr-14.webp" width="180" height="180" loading="lazy" alt=""><b>Clear Cassette</b><span class="rar">Common</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-15.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr hid C"><img src="/assets/brand/g/tr-16.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar ghost">Common</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-17.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-18.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-19.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid R"><img src="/assets/brand/g/tr-20.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Rare</span></li>
+        <li class="tr hid L"><img src="/assets/brand/g/tr-21.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Legendary</span></li>
+        <li class="tr hid L"><img src="/assets/brand/g/tr-22.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="Hidden treasure">???</b><span class="rar">Legendary</span></li>
+      </ul>
+      <p class="rule">Your collection counts every building in every set and every treasure: 124 finds in all.</p>
+    </div>
+  </section>
+
+  <section id="ranking">
+    <div class="wrap">
+      <div class="rank">
+        <h2>Climb the rankings</h2>
+        <p class="sub">Three boards, each showing the top 100 players.</p>
+        <ul class="boards">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><h3>This Week</h3><p>Your best score this week. Resets every Monday.</p></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4.5a3 3 0 0 0 3.5 4M16 6h3.5a3 3 0 0 1-3.5 4M12 13v4M8 21h8M9.5 17h5"/></svg><h3>All Time</h3><p>Your best score ever.</p></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5C5.5 5 9 5 12 7c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5zM12 7v12.5"/></svg><h3>Collection</h3><p>How many buildings and treasures you have found.</p></li>
+        </ul>
+        <ul class="facts">
+          <li>Every score is checked on our server by replaying the game, so the boards stay fair.</li>
+          <li>Sign in with Google or Apple to choose a ranking name. Guests appear as Anonymous.</li>
+          <li>Players under 14 play on their device only and are not ranked.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sound">
+    <div class="wrap sound">
+      <div>
+        <h2>Original music</h2>
+        <p class="sub">Listen to the title theme, composed for Skybloom.</p>
+      </div>
+      <div class="player">
+        <button class="play" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/><path class="i-pause" d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor" stroke="none"/></svg><span>Play the title theme</span></button>
+        <audio src="/assets/brand/title-theme.mp3" preload="none"></audio>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="join">
+        <div>
+          <h2>Join the iOS test</h2>
+          <p class="sub">Play Skybloom before it launches on November 20, 2026. We'll send a TestFlight invitation to the email you use for your Apple Account. The Android version comes with the launch.</p>
+        </div>
+        <form id="tester" novalidate>
+          <label>Name<input name="name" autocomplete="name" maxlength="60" required></label>
+          <label>Apple Account email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+          <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="ck"><input type="checkbox" name="age14" required><span>I am 14 or older.</span></label>
+          <label class="ck"><input type="checkbox" name="consent" required><span>Dreamhum may use my name and email to send me a TestFlight invitation (<a href="/skybloom/privacy/">privacy policy</a>).</span></label>
+          <button class="btn go" type="submit">Send request</button>
+          <p class="msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -233,6 +476,35 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
     </nav>
   </div>
 </footer>
+
+<script>
+// Skins tabs (arrow keys move between tabs), the title theme button, and the iOS tester sign-up.
+const tabs = [...document.querySelectorAll('[role=tab]')];
+const pick = t => tabs.forEach(b => { const on = b === t; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; document.getElementById(b.getAttribute('aria-controls')).hidden = !on; });
+tabs.forEach((b, i) => { b.onclick = () => pick(b); b.onkeydown = e => { const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); } }; });
+
+const play = document.querySelector('.play'), audio = document.querySelector('#sound audio');
+play.onclick = () => audio.paused ? audio.play() : audio.pause();
+audio.onplay = () => { play.setAttribute('aria-pressed', 'true'); play.querySelector('span').textContent = 'Pause the title theme'; };
+audio.onpause = audio.onended = () => { play.setAttribute('aria-pressed', 'false'); play.querySelector('span').textContent = 'Play the title theme'; };
+
+const form = document.getElementById('tester'), msg = form.querySelector('.msg'), send = form.querySelector('button');
+const ERR = { name: 'Please enter your name (up to 60 characters).', email: 'Please enter the email address of your Apple Account.', consent: 'Please tick both boxes to send the request.', limit: 'Too many requests from here. Please try again in an hour.' };
+form.onsubmit = async e => {
+  e.preventDefault();
+  const f = form.elements, body = { name: f.name.value, email: f.email.value, age14: f.age14.checked, consent: f.consent.checked, website: f.website.value };
+  const say = (t, ok) => { msg.textContent = t; msg.className = 'msg ' + (ok ? 'ok' : 'err'); };
+  if (!body.age14 || !body.consent) return say(ERR.consent);
+  send.disabled = true; say('Sending…', true);
+  try {
+    const r = await fetch('https://asia-northeast3-skybloom-31d98.cloudfunctions.net/requestTester', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok && j.ok) { form.reset(); say('Thanks! Your request is in. Look for a TestFlight invitation in your email.', true); }
+    else say(ERR[j.error] || 'Something went wrong. Please try again later.');
+  } catch { say("Couldn't send. Check your connection and try again."); }
+  send.disabled = false;
+};
+</script>
 
 </body>
 </html>
