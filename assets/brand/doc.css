@@ -1,0 +1,102 @@
+/* Privacy and Support: the home page's shell (base.css), set for long reading. */
+
+/* title band: a small piece of the home page's sky */
+.doc-hero { position: relative; overflow: hidden; isolation: isolate; border-radius: 40px; padding: clamp(24px, 5vw, 48px) clamp(20px, 5vw, 56px) clamp(40px, 6vw, 64px);
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 70%, var(--sky-3)); }
+.doc-hero .bank { position: absolute; z-index: -1; left: -5%; bottom: -55%; width: 110%; max-width: none; opacity: .9; pointer-events: none; }
+.back { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px 6px 12px; border-radius: 100px; font-size: 15px; font-weight: 900; text-decoration: none;
+  background: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.95); box-shadow: inset 0 1px 0 #fff; }
+.back:hover { background: #fff; }
+.doc-hero h1 { margin-top: 20px; font-size: clamp(34px, 5vw, 54px); font-weight: 900; line-height: 1.1; letter-spacing: -.015em; }
+.doc-hero .meta { margin-top: 14px; max-width: 64ch; font-size: 16px; line-height: 1.7; }
+.doc-hero .lead { margin-top: 12px; max-width: 52ch; font-size: 20px; line-height: 1.5; }
+
+/* privacy: contents on the left, one reading column */
+.doc-grid { display: grid; grid-template-columns: 240px minmax(0, 720px); justify-content: center; gap: clamp(32px, 5vw, 80px); margin-top: clamp(32px, 5vw, 56px); }
+.toc { position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow: auto; }
+.toc > b, .toc-m summary { font-size: 13px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.toc ol, .toc-m ol { list-style: none; margin: 12px 0 0; padding: 0; border-left: 2px solid var(--line); }
+.toc a, .toc-m a { display: block; margin-left: -2px; padding: 6px 0 6px 16px; border-left: 2px solid transparent; font-size: 15px; font-weight: 800; line-height: 1.35; color: var(--ink-soft); text-decoration: none; }
+.toc a:hover, .toc-m a:hover { color: var(--ink); }
+.toc a[aria-current] { color: var(--ink); border-left-color: var(--sky-1); }
+.toc-m { display: none; }
+
+/* reading type */
+.doc { max-width: 720px; font-size: 18px; font-weight: 600; line-height: 1.75; color: var(--ink-soft); }
+.doc > * + * { margin-top: 16px; }
+.doc h2 { display: flex; align-items: center; gap: 12px; margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--line); font-size: clamp(24px, 3vw, 30px); font-weight: 900; line-height: 1.25; color: var(--ink); scroll-margin-top: 24px; }
+.doc h2:first-of-type { margin-top: 40px; }
+.doc h2 .n { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; font-size: 18px; background: var(--gold); color: var(--gold-ink); box-shadow: inset 0 -2px 0 rgba(0,0,0,.12); }
+.doc h3 { display: flex; align-items: baseline; gap: 10px; margin-top: 36px; font-size: 21px; font-weight: 900; line-height: 1.35; color: var(--ink); scroll-margin-top: 24px; }
+.doc h3 .n { flex: none; padding: 1px 10px; border-radius: 100px; font-size: 14px; background: var(--sky-3); color: #1a6fb0; border: 1px solid #cde8fb; }
+.doc ul { padding-left: 1.25em; }
+.doc li + li { margin-top: 10px; }
+.doc li::marker { color: var(--sky-1); }
+.doc strong { color: var(--ink); font-weight: 800; }
+.doc a { color: #1a6fb0; font-weight: 800; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.doc .note { margin-top: 32px; padding: 22px 26px; border-radius: 24px; background: var(--soft); border: 1px solid var(--line); color: var(--ink); }
+
+/* tables: quiet rows on wide screens, one card per row on phones */
+.table-wrap { margin-top: 20px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.doc table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.55; }
+.doc th { padding: 12px 16px; text-align: left; vertical-align: bottom; background: var(--soft); color: var(--ink); font-weight: 900; }
+.doc td { padding: 13px 16px; vertical-align: top; border-top: 1px solid var(--line); }
+.doc td:first-child { color: var(--ink); font-weight: 800; }
+
+/* support */
+.doc-one { max-width: 760px; margin: clamp(32px, 5vw, 56px) auto 0; }
+.contact { display: grid; grid-template-columns: auto 1fr; gap: 20px 24px; align-items: center; padding: clamp(22px, 4vw, 32px); border-radius: 32px; background: var(--soft); }
+.contact svg, .more-cards svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.contact .ic { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 20px; color: #fff; background: linear-gradient(var(--sky-1), #2491d8); box-shadow: 0 8px 18px rgba(36,145,216,.3); }
+.contact h2 { margin: 0; padding: 0; border: 0; font-size: 24px; }
+.contact p { margin-top: 4px; font-size: 17px; }
+.contact .btn { grid-column: 1 / -1; justify-self: start; }
+.faq { margin-top: 18px; display: grid; gap: 12px; }
+.faq details { border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; cursor: pointer; list-style: none; font-size: 18px; font-weight: 900; line-height: 1.35; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; margin-right: 4px; border-right: 3px solid var(--sky-1); border-bottom: 3px solid var(--sky-1); margin-top: -6px; transform: rotate(45deg); transition: transform .2s, margin .2s; }
+.faq details[open] summary::after { margin-top: 6px; transform: rotate(225deg); }
+.faq details[open] summary { padding-bottom: 6px; }
+.faq details > p { margin: 0; padding: 0 22px 20px; }
+.more-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.more-cards a { display: flex; align-items: center; gap: 14px; padding: 20px 22px; border-radius: 24px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-size: 18px; font-weight: 900; }
+.more-cards a:hover { background: var(--soft); }
+.more-cards small { display: block; font-size: 15px; font-weight: 700; color: var(--ink-soft); }
+
+.totop { position: fixed; right: 20px; bottom: 20px; z-index: 5; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; text-decoration: none; font-size: 22px; font-weight: 900;
+  color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--line); box-shadow: 0 8px 20px rgba(18,50,110,.18); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.totop.on { opacity: 1; pointer-events: auto; }
+
+/* Korean: Nunito still sets Latin letters and numbers; Korean falls to Jua (headings) or the system font (body) */
+html[lang="ko"] body { font-family: "Nunito", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif; word-break: keep-all; }
+html[lang="ko"] :is(h1, h2, h3, .btn, .back, .faq summary, .more-cards a, .toc a, .toc-m a, .top nav) { font-family: "Nunito", "Jua", sans-serif; font-synthesis: none; }
+html[lang="ko"] .doc { line-height: 1.85; }
+
+@media (max-width: 960px) {
+  .doc-grid { grid-template-columns: minmax(0, 720px); }
+  .toc { display: none; }
+  .toc-m { display: block; padding: 16px 20px; border-radius: 22px; background: var(--soft); border: 1px solid var(--line); }
+  .toc-m summary { cursor: pointer; }
+}
+@media (max-width: 640px) {
+  .doc { font-size: 17px; }
+  .doc-hero { border-radius: 32px; }
+  .table-wrap { border: 0; border-radius: 0; overflow: visible; }
+  .doc table, .doc tbody, .doc tr, .doc td { display: block; }
+  .doc tr:first-child { display: none; }   /* the header row: its labels move into each cell */
+  .doc tr + tr { margin-top: 12px; }
+  .doc tr { padding: 14px 18px; border: 1px solid var(--line); border-radius: 18px; }
+  .doc td { padding: 4px 0; border: 0; }
+  .doc td:first-child { font-size: 17px; padding-bottom: 6px; }
+  .doc td[data-label]::before { content: attr(data-label); display: block; font-size: 13px; font-weight: 900; color: var(--ink-soft); opacity: .8; }
+  .contact { grid-template-columns: 1fr; }
+  .more-cards { grid-template-columns: 1fr; }
+}
+@media print {
+  .top, footer, .toc, .toc-m, .totop, .back, .doc-hero .bank { display: none !important; }
+  .doc-hero { padding: 0; background: none; border-radius: 0; }
+  .doc-grid { display: block; margin: 16px 0 0; }
+  .doc { max-width: none; font-size: 11pt; }
+  .doc h2 { break-after: avoid; }
+}

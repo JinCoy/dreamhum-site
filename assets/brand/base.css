@@ -1,0 +1,48 @@
+/* dreamhum.com: what every page shares (font, colors, base type, buttons, header, footer). Page styles stay in each page. */
+@font-face { font-family: "Nunito"; src: url("/assets/brand/fonts/nunito-latin.woff2") format("woff2"); font-weight: 200 1000; font-display: swap; }
+:root {
+  color-scheme: light;
+  --canvas: #fff; --soft: #f2f8fd; --line: #dce8f5;
+  --ink: #12326e; --ink-soft: #46597d;
+  --sky-1: #3db4f5; --sky-2: #9ad8fb; --sky-3: #eaf7ff;
+  --leaf-1: #5bbe4c; --leaf-2: #23852a; --gold: #f9cb4e; --gold-ink: #5a3a00;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 700 18px/1.6 "Nunito", ui-rounded, system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3, p, ol, ul { margin: 0; }
+.wrap { width: min(1200px, 100%); margin-inline: auto; padding-inline: var(--gutter); }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* buttons: the game's glossy green Play button, and a quiet outline */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 100px; font-size: 19px; font-weight: 900; letter-spacing: .01em; text-decoration: none; }
+.btn.go { position: relative; color: #fff; background: linear-gradient(var(--leaf-1), var(--leaf-2)); box-shadow: inset 0 -3px 0 rgba(0,0,0,.12), 0 8px 20px rgba(35,133,42,.28); text-shadow: 0 1px 0 rgba(0,60,0,.35); }
+.btn.go::before { content: ""; position: absolute; inset: 4px 14px auto; height: 42%; border-radius: 100px; background: linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.08)); pointer-events: none; }
+.btn.go:hover { filter: brightness(1.05); }
+.btn.line { color: var(--ink); border: 2px solid rgba(18,50,110,.25); background: rgba(255,255,255,.6); }
+.btn.line:hover { background: #fff; }
+.btn.sm { min-height: 42px; padding: 0 20px; font-size: 16px; }
+/* header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.top .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 20px; font-weight: 900; }
+.top .logo img { width: 44px; border-radius: 12px; box-shadow: 0 4px 10px rgba(18,50,110,.18); }
+.top nav { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 30px); font-size: 16px; font-weight: 800; color: var(--ink-soft); }
+.top nav > a:not(.btn) { text-decoration: none; padding-block: 8px; }
+.top nav > a:not(.btn):hover { color: var(--ink); }
+footer { margin-top: clamp(80px, 10vw, 120px); border-top: 1px solid var(--line); padding-block: 32px 48px; font-size: 15px; color: var(--ink-soft); }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+footer a { text-decoration: none; }
+.lang { display: flex; gap: 10px; align-items: center; }
+.lang [aria-current] { color: var(--ink); font-weight: 900; }
+footer a:hover { color: var(--ink); text-decoration: underline; }
+
+/* language switch in the header (the footer has the same links) */
+.lang-top { display: flex; padding: 3px; border-radius: 100px; background: var(--soft); border: 1px solid var(--line); font-size: 14px; font-weight: 900; }
+.lang-top a { padding: 5px 11px; border-radius: 100px; text-decoration: none; color: var(--ink-soft); }
+.lang-top a:hover { color: var(--ink); }
+.lang-top a[aria-current] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(18,50,110,.18); }
+@media (max-width: 720px) { .top nav > a:not(.btn) { display: none; } }
+@media (max-width: 440px) { .top .logo span { display: none; } .top nav { gap: 10px; } }
