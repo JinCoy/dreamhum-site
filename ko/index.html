@@ -117,7 +117,7 @@ footer a { text-decoration: none; }
 footer a:hover { color: var(--ink); text-decoration: underline; }
 
 
-.sub { margin-top: 12px; max-width: 60ch; color: var(--ink-soft); font-size: 19px; }
+.sub { margin-top: 12px; color: var(--ink-soft); font-size: 19px; }
 
 /* buildings: one ladder you can scroll sideways */
 .ladder { margin-top: 32px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding: 8px 0 18px; }
@@ -147,19 +147,10 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 .tl { padding: 16px 12px 14px; border-radius: 24px; background: var(--soft); text-align: center; }
 .tl img { width: 100%; max-width: 120px; height: 90px; object-fit: contain; margin: 0 auto; }
 
-/* collection: five shown, the rest kept secret */
-.treasures { list-style: none; padding: 0; margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
-.tr { position: relative; padding: 16px 12px 14px; border-radius: 24px; text-align: center; background: linear-gradient(180deg, #e9f6ff, #fff); border: 1px solid var(--line); }
-.tr img { width: 100px; height: 100px; object-fit: contain; margin: 0 auto; }
-.tr b { display: block; margin-top: 8px; font-size: 15px; font-weight: 900; line-height: 1.25; }
-.rar { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 100px; font-size: 12px; font-weight: 900; color: #fff; background: #3b7fe0; }
-.R .rar { background: #8a5ad8; }
-.L .rar { background: linear-gradient(#f6c74e, #e39a1d); color: var(--gold-ink); }
-.rar.ghost { visibility: hidden; }
-.tr.hid { background: linear-gradient(180deg, #1d3d7a, #12326e); border-color: #2c5194; }
-.tr.hid img { opacity: .9; }
-.tr.hid b { color: var(--gold); font-size: 22px; letter-spacing: .08em; text-shadow: 0 0 12px rgba(249,203,78,.7); }
-.tr.hid.L { box-shadow: 0 0 0 2px rgba(249,203,78,.55), 0 10px 26px rgba(227,154,29,.25); }
+/* collection: one treasure chest */
+.chest { margin: 24px auto 0; max-width: 1008px; text-align: center; }
+.chest img { width: 100%; height: auto; }
+.chest figcaption { margin-top: 8px; font-size: 16px; font-weight: 800; color: var(--ink-soft); }
 
 /* ranking: a sky band again, glass cards on it */
 .rank { border-radius: 40px; padding: clamp(28px, 6vw, 64px); background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 70%, var(--sky-3)); }
@@ -193,9 +184,32 @@ form .btn[disabled] { opacity: .6; cursor: wait; }
 .msg.ok { color: #1f7a27; }
 .msg.err { color: #b3261e; }
 
+.merge { align-items: flex-end; padding-bottom: 46px; }
+.merge .op { align-self: center; }
+.merge .bld:not(:last-child) img { width: clamp(54px, 14vw, 76px); }
+.kicker { display: flex; align-items: center; gap: 14px; margin-top: 40px; font-size: 14px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.kicker::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.set button { all: unset; box-sizing: border-box; display: block; width: 100%; cursor: pointer; border-radius: 20px; }
+.set button:focus-visible { outline: 3px solid var(--sky-1); outline-offset: 8px; }
+.set { transition: transform .2s, box-shadow .2s; }
+.set:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(18,50,110,.12); }
+.more { display: inline-block; margin-top: 10px; padding: 6px 14px; border-radius: 100px; font-size: 14px; font-weight: 900; color: #fff; background: linear-gradient(var(--sky-1), #2491d8); }
+#dex { width: min(980px, calc(100% - 32px)); max-height: 88vh; padding: 0; border: 0; border-radius: 32px; color: var(--ink); background: linear-gradient(180deg, #eaf7ff, #fff 40%); box-shadow: 0 30px 80px rgba(18,50,110,.35); }
+#dex::backdrop { background: rgba(18,50,110,.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.dex-top { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px 14px; background: rgba(234,247,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.dex-top h3 { font-size: 26px; font-weight: 900; line-height: 1.2; }
+.dex-top small { display: block; font-size: 15px; font-weight: 800; color: var(--ink-soft); }
+.x { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--line); background: #fff; color: var(--ink); font: inherit; font-size: 26px; font-weight: 900; line-height: 1; cursor: pointer; }
+.dex { list-style: none; padding: 4px 24px 24px; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 12px; }
+.dex li { position: relative; padding: 14px 10px 12px; border-radius: 22px; background: #fff; border: 1px solid var(--line); text-align: center; }
+.dex img { width: 96px; height: 96px; object-fit: contain; margin: 0 auto; }
+.dex .lv { top: 8px; left: 8px; right: auto; bottom: auto; width: 26px; height: 26px; font-size: 13px; }
+.dex .nm { font-size: 14px; margin-top: 6px; }
+@media (max-width: 560px) { .dex { grid-template-columns: repeat(2, 1fr); padding-inline: 16px; } .dex-top { padding-inline: 16px; } }
+
 /* Korean: Nunito still sets Latin letters and numbers; Korean falls to Jua (headings) or the system font (body) */
 body { font-family: "Nunito", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif; font-weight: 600; line-height: 1.7; word-break: keep-all; }
-h1, h2, h3, .tagline, .btn, .tabs button, .nm, .tr b, .g b, .play, .chip, .next b, form label, .op { font-family: "Nunito", "Jua", sans-serif; font-synthesis: none; }
+h1, h2, h3, .tagline, .btn, .tabs button, .nm, .g b, .kicker, .more, .dex-top h3, .chest figcaption, .play, .chip, .next b, form label, .op { font-family: "Nunito", "Jua", sans-serif; font-synthesis: none; }
 h2 { letter-spacing: 0; line-height: 1.25; }
 @media (max-width: 900px) {
   .sets { grid-template-columns: 1fr 1fr; } .skies { grid-template-columns: repeat(3, 1fr); } .boards, .join, .sound { grid-template-columns: 1fr; }
@@ -277,7 +291,7 @@ h2 { letter-spacing: 0; line-height: 1.25; }
           <p>놓기를 누르면 다음 건물이 빈칸에 놓여요. 다음에 올 건물은 언제나 미리 보여요.</p>
         </li>
         <li>
-          <div class="art" aria-hidden="true">
+          <div class="art merge" aria-hidden="true">
             <span class="bld"><img src="/assets/brand/b-sprout.webp" width="200" height="240" alt=""><span class="lv">2</span></span>
             <span class="op">+</span>
             <span class="bld"><img src="/assets/brand/b-sprout.webp" width="200" height="240" alt=""><span class="lv">2</span></span>
@@ -301,6 +315,7 @@ h2 { letter-spacing: 0; line-height: 1.25; }
         </li>
       </ol>
 
+      <p class="kicker">아이템</p>
       <div class="items">
         <div class="item"><img src="/assets/brand/item-rewind.webp" width="164" height="200" alt=""><div><h3>되감기</h3><p>마지막 행동을 취소해요.</p></div></div>
         <div class="item"><img src="/assets/brand/item-pop.webp" width="170" height="200" alt=""><div><h3>버블 팝</h3><p>건물 하나를 터뜨려요.</p></div></div>
@@ -348,12 +363,12 @@ h2 { letter-spacing: 0; line-height: 1.25; }
         <button role="tab" id="t-bubs" aria-controls="p-bubs" aria-selected="false" tabindex="-1">비눗방울 <span>8</span></button>
       </div>
       <div class="panel" role="tabpanel" id="p-sets" aria-labelledby="t-sets"><ul class="g sets">
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-classic-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>클래식 유리</b><small>기본</small></li>
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-candy-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>캔디 유리</b></li>
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-eco-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>에코 캠퍼스</b></li>
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-aqua-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>아쿠아 가젯</b></li>
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-poolhouse-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>파스텔 풀하우스</b></li>
-          <li class="set"><div class="row"><img src="/assets/brand/g/set-reverie-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>몽상 마을</b></li>
+          <li class="set"><button type="button" data-set="classic" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-classic-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>클래식 유리</b><small>기본</small><span class="more">17종 모두 보기</span></button></li>
+          <li class="set"><button type="button" data-set="candy" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-candy-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>캔디 유리</b><span class="more">17종 모두 보기</span></button></li>
+          <li class="set"><button type="button" data-set="eco" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-eco-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>에코 캠퍼스</b><span class="more">17종 모두 보기</span></button></li>
+          <li class="set"><button type="button" data-set="aqua" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-aqua-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>아쿠아 가젯</b><span class="more">17종 모두 보기</span></button></li>
+          <li class="set"><button type="button" data-set="poolhouse" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-poolhouse-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>파스텔 풀하우스</b><span class="more">17종 모두 보기</span></button></li>
+          <li class="set"><button type="button" data-set="reverie" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-reverie-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>몽상 마을</b><span class="more">17종 모두 보기</span></button></li>
         </ul></div>
       <div class="panel" role="tabpanel" id="p-skies" aria-labelledby="t-skies" hidden><ul class="g skies">
           <li class="sky"><img src="/assets/brand/g/sky-day.webp" width="400" height="500" loading="lazy" alt=""><b>하늘 섬</b><small>기본</small></li>
@@ -393,30 +408,11 @@ h2 { letter-spacing: 0; line-height: 1.25; }
     <div class="wrap">
       <h2>비눗방울 속 보물 22종</h2>
       <p class="sub">분홍 비눗방울을 터뜨려 찾아보세요. 여기서는 5종만 보여 드려요. 나머지는 하늘 어딘가에서 기다리고 있어요.</p>
-      <ul class="treasures">
-        <li class="tr C"><img src="/assets/brand/g/tr-01.webp" width="180" height="180" loading="lazy" alt=""><b>유리구슬</b><span class="rar">일반</span></li>
-        <li class="tr C"><img src="/assets/brand/g/tr-02.webp" width="180" height="180" loading="lazy" alt=""><b>종이배</b><span class="rar">일반</span></li>
-        <li class="tr C"><img src="/assets/brand/g/tr-03.webp" width="180" height="180" loading="lazy" alt=""><b>민들레 홀씨</b><span class="rar">일반</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-04.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-05.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-06.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr R"><img src="/assets/brand/g/tr-07.webp" width="180" height="180" loading="lazy" alt=""><b>유리 나비</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-08.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-09.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-10.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid L"><img src="/assets/brand/g/tr-11.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">전설</span></li>
-        <li class="tr hid L"><img src="/assets/brand/g/tr-12.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">전설</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-13.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr C"><img src="/assets/brand/g/tr-14.webp" width="180" height="180" loading="lazy" alt=""><b>투명 카세트</b><span class="rar">일반</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-15.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr hid C"><img src="/assets/brand/g/tr-16.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar ghost">일반</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-17.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-18.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-19.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid R"><img src="/assets/brand/g/tr-20.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">희귀</span></li>
-        <li class="tr hid L"><img src="/assets/brand/g/tr-21.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">전설</span></li>
-        <li class="tr hid L"><img src="/assets/brand/g/tr-22.webp" width="180" height="180" loading="lazy" alt=""><b aria-label="숨겨진 보물">???</b><span class="rar">전설</span></li>
-      </ul>
+      <figure class="chest">
+        <img src="/assets/brand/chest-1008.webp" srcset="/assets/brand/chest-640.webp 640w, /assets/brand/chest-1008.webp 1008w" sizes="(max-width: 1040px) 100vw, 1008px" width="1008" height="674" loading="lazy"
+             alt="보물이 가득 쌓인 열린 유리 보물상자: 유리구슬, 투명 카세트, 민들레 홀씨, 유리 나비가 보이고 종이배는 상자 앞으로 쏟아져 나와 있어요. 나머지 보물은 아직 숨겨진 어두운 실루엣이에요.">
+        <figcaption>유리구슬 · 종이배 · 민들레 홀씨 · 유리 나비 · 투명 카세트 · 그리고 숨겨진 17종</figcaption>
+      </figure>
       <p class="rule">도감에는 모든 세트의 건물과 보물이 모여요. 모두 124개입니다.</p>
     </div>
   </section>
@@ -474,11 +470,13 @@ h2 { letter-spacing: 0; line-height: 1.25; }
   </section>
 
 </main>
+<dialog id="dex" aria-labelledby="dex-h"><div class="dex-top"><div><h3 id="dex-h"></h3><small>건물 17종</small></div><button class="x" type="button" aria-label="닫기">×</button></div><ol class="dex"></ol></dialog>
+<script type="application/json" id="set-names">{"classic": ["이슬방울", "새싹", "수련 꽃", "유리 화분", "버블 분수", "바람 풍차", "유리 온실", "물빛 정자", "태양 돔", "폭포 정원", "크리스털 탑", "하늘 돔", "무지개 다리", "구름 항구", "별 관측소", "오로라 궁전", "스카이블룸 나무"], "candy": ["이슬방울", "새싹", "수련 꽃", "유리 화분", "버블 분수", "바람 풍차", "유리 온실", "물빛 정자", "태양 돔", "폭포 정원", "크리스털 탑", "하늘 돔", "무지개 다리", "구름 항구", "별 관측소", "오로라 궁전", "스카이블룸 나무"], "poolhouse": ["타일 램프", "버섯 샤워", "물결 벤치", "분홍 공중전화", "물빛 주크박스", "구름 계단", "풀사이드 부스", "아치 풀하우스", "버섯 목욕당", "수상 다이너", "진주 조개 욕장", "물의 모래시계", "뫼비우스 수로", "해파리 공중 온천", "천체 조수 관측소", "역중력 목욕궁", "바다를 품은 꿈의 구체"], "reverie": ["꿈 우편함", "지붕 새집", "현관 화단", "홀로 선 문", "창문 오두막", "쌍둥이 현관집", "발코니 하우스", "구름 회전목마 정거장", "다락 계단집", "주택 다리", "창문 탑", "중정 저택", "뒤집힌 꿈의 도서관", "발코니 군락", "끝없는 계단집", "달을 품은 공중 수목원", "접힌 마을"], "eco": ["에코 포드", "태양광 등", "토피어리 화분", "빗물 탱크", "나선 풍차", "분수 연못", "홀로 키오스크", "포드 하우스", "유리 전시관", "수경 정원", "아트리움 홀", "모노레일 역", "터빈 타워", "튜브 광장", "스카이 랩", "아쿠아 아콜로지", "바이오스피어 언덕"], "aqua": ["어항", "캡슐", "라바 램프", "해파리 수조", "라디오 오두막", "디스크 분수", "픽셀 펫 하우스", "수족관 오두막", "물방울 돔", "산호 오락실", "돌고래 첨탑", "튜브 슬라이드", "유리 리프트 타워", "오션 드라이브 몰", "웨이브 스테이션", "서버 궁전", "드림 글로브"]}</script>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Dreamhum</span>
-    <nav class="lang" aria-label="언어"><a href="/" lang="en">English</a><span aria-hidden="true">|</span><a href="/ko/" lang="ko" aria-current="page">한국어</a></nav>
+    <nav class="lang" aria-label="Language"><a href="/" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/ko/" lang="ko">한국어</a></nav>
     <nav aria-label="하단 메뉴">
       <a href="https://www.instagram.com/skybloom_mobile/">Instagram</a>
       <a href="/skybloom/privacy/">개인정보 처리방침</a>
@@ -493,6 +491,15 @@ h2 { letter-spacing: 0; line-height: 1.25; }
 const tabs = [...document.querySelectorAll('[role=tab]')];
 const pick = t => tabs.forEach(b => { const on = b === t; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; document.getElementById(b.getAttribute('aria-controls')).hidden = !on; });
 tabs.forEach((b, i) => { b.onclick = () => pick(b); b.onkeydown = e => { const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); } }; });
+
+const dex = document.getElementById('dex'), NAMES = JSON.parse(document.getElementById('set-names').textContent);
+document.querySelectorAll('[data-set]').forEach(b => { b.onclick = () => {
+  const s = b.dataset.set; dex.querySelector('h3').textContent = b.querySelector('b').textContent;
+  dex.querySelector('ol').innerHTML = NAMES[s].map((n, i) => `<li><img src="/assets/brand/g/set-${s}-${String(i + 1).padStart(2, '0')}.webp" width="200" height="200" alt=""><span class="lv">${i + 1}</span><span class="nm">${n}</span></li>`).join('');
+  dex.showModal(); dex.scrollTop = 0;
+}; });
+dex.querySelector('.x').onclick = () => dex.close();
+dex.onclick = e => { if (e.target === dex) dex.close(); };   // a click on the backdrop closes it
 
 const play = document.querySelector('.play'), audio = document.querySelector('#sound audio');
 play.onclick = () => audio.paused ? audio.play() : audio.pause();
