@@ -147,8 +147,8 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 .tl img { width: 100%; max-width: 120px; height: 90px; object-fit: contain; margin: 0 auto; }
 
 /* collection: one treasure chest */
-.chest { margin: 24px auto 0; max-width: 1008px; text-align: center; }
-.chest img { width: 100%; height: auto; }
+.chest { margin: 24px auto 0; text-align: center; }
+.chest img { width: 100%; max-width: 605px; height: auto; margin-inline: auto; }
 .chest figcaption { margin-top: 8px; font-size: 16px; font-weight: 800; color: var(--ink-soft); }
 
 /* ranking: a sky band again, glass cards on it */
@@ -358,12 +358,12 @@ form .btn[disabled] { opacity: .6; cursor: wait; }
         <button role="tab" id="t-bubs" aria-controls="p-bubs" aria-selected="false" tabindex="-1">Bubbles <span>8</span></button>
       </div>
       <div class="panel" role="tabpanel" id="p-sets" aria-labelledby="t-sets"><ul class="g sets">
-          <li class="set"><button type="button" data-set="classic" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-classic-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Classic Glass</b><small>Default</small><span class="more">See all 17</span></button></li>
-          <li class="set"><button type="button" data-set="candy" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-candy-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Candy Glass</b><span class="more">See all 17</span></button></li>
-          <li class="set"><button type="button" data-set="eco" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-eco-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Eco Campus</b><span class="more">See all 17</span></button></li>
-          <li class="set"><button type="button" data-set="aqua" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-aqua-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Aqua Gadget</b><span class="more">See all 17</span></button></li>
-          <li class="set"><button type="button" data-set="poolhouse" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-poolhouse-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Pastel Poolhouse</b><span class="more">See all 17</span></button></li>
-          <li class="set"><button type="button" data-set="reverie" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-reverie-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Reverie Village</b><span class="more">See all 17</span></button></li>
+          <li class="set"><button type="button" data-set="classic" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-classic-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-classic-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Classic Glass</b><span class="more">See all</span></button></li>
+          <li class="set"><button type="button" data-set="candy" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-candy-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-candy-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Candy Glass</b><span class="more">See all</span></button></li>
+          <li class="set"><button type="button" data-set="eco" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-eco-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-eco-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Eco Campus</b><span class="more">See all</span></button></li>
+          <li class="set"><button type="button" data-set="aqua" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-aqua-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-aqua-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Aqua Gadget</b><span class="more">See all</span></button></li>
+          <li class="set"><button type="button" data-set="poolhouse" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-poolhouse-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-poolhouse-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Pastel Poolhouse</b><span class="more">See all</span></button></li>
+          <li class="set"><button type="button" data-set="reverie" aria-haspopup="dialog"><div class="row"><img src="/assets/brand/g/set-reverie-05.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-10.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-14.webp" width="200" height="200" loading="lazy" alt=""><img src="/assets/brand/g/set-reverie-17.webp" width="200" height="200" loading="lazy" alt=""></div><b>Reverie Village</b><span class="more">See all</span></button></li>
         </ul></div>
       <div class="panel" role="tabpanel" id="p-skies" aria-labelledby="t-skies" hidden><ul class="g skies">
           <li class="sky"><img src="/assets/brand/g/sky-day.webp" width="400" height="500" loading="lazy" alt=""><b>Sky Island</b><small>Default</small></li>
@@ -404,11 +404,10 @@ form .btn[disabled] { opacity: .6; cursor: wait; }
       <h2>22 treasures hide in the bubbles</h2>
       <p class="sub">Pop pink bubbles to find them. Five are shown here; the rest are waiting in the sky.</p>
       <figure class="chest">
-        <img src="/assets/brand/chest-1008.webp" srcset="/assets/brand/chest-640.webp 640w, /assets/brand/chest-1008.webp 1008w" sizes="(max-width: 1040px) 100vw, 1008px" width="1008" height="674" loading="lazy"
+        <img src="/assets/brand/chest-1008.webp" srcset="/assets/brand/chest-640.webp 640w, /assets/brand/chest-1008.webp 1008w" sizes="(max-width: 640px) 100vw, 605px" width="1008" height="674" loading="lazy"
              alt="An open glass treasure chest piled with treasures: the Glass Marble, Clear Cassette, Dandelion Puff and Glass Butterfly, with the Paper Boat spilled out in front. The rest are dark silhouettes, still hidden.">
         <figcaption>Glass Marble · Paper Boat · Dandelion Puff · Glass Butterfly · Clear Cassette · and 17 more</figcaption>
       </figure>
-      <p class="rule">Your collection counts every building in every set and every treasure: 124 finds in all.</p>
     </div>
   </section>
 
@@ -473,7 +472,7 @@ form .btn[disabled] { opacity: .6; cursor: wait; }
     <span>© 2026 Dreamhum</span>
     <nav class="lang" aria-label="Language"><a href="/" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/ko/" lang="ko">한국어</a></nav>
     <nav aria-label="Footer">
-      <a href="https://www.instagram.com/skybloom_mobile/">Instagram</a>
+      <a href="https://www.instagram.com/skybloom.mobile/">Instagram</a>
       <a href="/skybloom/privacy/">Privacy</a>
       <a href="/support/">Support</a>
       <a href="mailto:support@dreamhum.com">support@dreamhum.com</a>
