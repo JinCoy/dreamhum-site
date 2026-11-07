@@ -73,7 +73,7 @@
     <li>performance summaries (frame times, load time, error counts);</li>
     <li>your answers to short surveys, including any text you type (up to 500 characters). Please do not write names, contact details or other personal information.</li>
   </ul>
-  <p>The record uses random identifiers. It does not include your name, email, phone number, phone model, advertising identifier, or location. <strong>Nothing is sent automatically.</strong> The record leaves your device only if you create a file in <strong>Settings → Send Play Log</strong> and share it with us yourself. If you are 18 or older and have not joined the play test, <strong>Send Play Log</strong> can still create a file of the game history in Section 2.1; it also leaves your device only if you share it with us yourself.</p>
+  <p>The record uses random identifiers. It does not include your name, email, phone number, phone model, advertising identifier, or location. <strong>Nothing is sent automatically</strong>, except in the test versions described in Section 2.8 and only if you agree there. Otherwise, the record leaves your device only if you create a file in <strong>Settings → Send Play Log</strong> and share it with us yourself. If you are 18 or older and have not joined the play test, <strong>Send Play Log</strong> can still create a file of the game history in Section 2.1; it also leaves your device only if you share it with us yourself.</p>
 
   <h3>2.5 Joining the test</h3>
   <p>To join a test, you give us the email address you use with Apple or Google, and Apple or Google shares it with us as a tester. Through TestFlight, Apple also gives us crash reports and any feedback or screenshots you choose to send, together with your device model and operating-system version. Apple and Google handle this under their own privacy policies.</p>
@@ -86,7 +86,16 @@
   <p><strong>Remove-ads purchase.</strong> If you buy the one-time remove-ads pack, the payment is handled by Apple (App Store) or Google (Google Play); we do not receive your card or payment details. When you use a Google or Apple account, our server receives a confirmation from the store and keeps, with your account: the purchase identifier, the product, the platform (iPhone or Android), the time and the status (for example paid or refunded). We do not keep the store receipt itself. We also keep, with your account, whether ads are removed and whether the bonus gold of the pack has been given and received. A guest account cannot make a purchase that our server records.</p>
   <p><strong>Bonus protection.</strong> To stop the same purchase from giving the bonus twice (for example if you delete your account and restore the purchase), we keep a marker &ldquo;bonus given&rdquo; together with a code made from the purchase identifier, without your account identifier. It stays after you delete your account.</p>
 
-  <h3>2.8 What we do not collect</h3>
+  <h3>2.8 Test play logs sent automatically (adults who opt in)</h3>
+  <p>In test versions only (TestFlight and Google Play testing), if you are 18 or older, signed in, and choose to join, the game sends play records to our server (Google Firebase, Seoul region) about every 20 seconds while you play. <strong>Nothing is sent before you say yes</strong>, and the game plays the same if you say no.</p>
+  <p><strong>What we collect:</strong> a random install ID, a tester number, test and session IDs, and your sign-in account's unique ID (we do not put your name or e-mail in the log); touch positions and moves, scores, levels, bubbles, the stages at which ads were shown or watched, screen changes and time spent, settings changes, and optional post-game survey answers; device type and approximate OS version, screen size, language, time zone, CPU core count, reduced-motion setting, a performance summary, and the app version.</p>
+  <p><strong>Why:</strong> to tune difficulty, items and ad timing (including tests where different players get different rule values) and to fix errors and performance. We do not use it for advertising and we do not sell it.</p>
+  <p><strong>How long:</strong> raw records are deleted automatically after 30 days. If we create summaries (scores, levels, statistics), they are kept for 1 year [TO BE CONFIRMED]. We handle a deletion request within 30 days of receiving it.</p>
+  <p><strong>Who processes it:</strong> Google (Firebase / Google Cloud) processes the data for us. [Any use of summaries in other analysis tools: TO BE CONFIRMED]</p>
+  <p><strong>Your choices:</strong> you can withdraw at any time in Settings; withdrawing deletes your logs on the server (if the device is offline, at the next launch). Deleting your account also deletes them. If you no longer have the app, email <a href="mailto:support@dreamhum.com">support@dreamhum.com</a> with your tester number. [CONTACT TO BE CONFIRMED]</p>
+  <p><strong>Children:</strong> the app does not record or send play logs when the age you entered is under 18. [Wording TO BE CONFIRMED: our server cannot verify age.]</p>
+
+  <h3>2.9 What we do not collect</h3>
   <p>Contacts, photos, precise location, your card or other payment details (payments are handled by Apple or Google), your date of birth and your password (sign-in is handled by Google or Apple).</p>
 
   <h2>3. Why information is used</h2>
@@ -100,7 +109,7 @@
     <tr><td>Improve the game with anonymous totals and experiments (18 and older)</td><td>Anonymous counters, experiment label (2.6)</td></tr>
     <tr><td>Give the remove-ads pack and its bonus once</td><td>Purchase record, wallet, bonus marker (2.7)</td></tr>
     <tr><td>Run the test and fix problems</td><td>Tester email, crash reports and feedback (2.5)</td></tr>
-    <tr><td>Improve the game, only if you agree</td><td>Play-log files you send us (2.4)</td></tr>
+    <tr><td>Improve the game, only if you agree</td><td>Play-log files you send us (2.4); test play logs sent automatically (2.8)</td></tr>
     <tr><td>Answer your messages</td><td>Your message and email address</td></tr>
   </table></div>
   <p>We do not sell your information.</p>
@@ -108,7 +117,7 @@
   <h2>4. Who receives information</h2>
   <div class="table-wrap"><table>
     <tr><th>Recipient</th><th>Why</th></tr>
-    <tr><td>Google (Firebase)</td><td>Hosts accounts, saved progress, statistics and purchase records for us (2.2, 2.6, 2.7)</td></tr>
+    <tr><td>Google (Firebase)</td><td>Hosts accounts, saved progress, statistics, purchase records and test play logs for us (2.2, 2.6, 2.7, 2.8)</td></tr>
     <tr><td>Google (Google sign-in), Apple (Sign in with Apple)</td><td>Sign you in when you choose them (2.2)</td></tr>
     <tr><td>Google (AdMob)</td><td>Ads you choose to watch (2.3)</td></tr>
     <tr><td>Apple (App Store), Google (Google Play)</td><td>Payment for the remove-ads pack (2.7)</td></tr>
@@ -134,6 +143,8 @@
     <tr><td>&ldquo;Bonus given&rdquo; marker (code from the purchase identifier, no account identifier)</td><td>Kept permanently, also after you delete your account</td></tr>
     <tr><td>Play log on your device</td><td>Until you delete it or delete the app</td></tr>
     <tr><td>Play-log files you send us</td><td>30 days after we receive them, then deleted</td></tr>
+    <tr><td>Test play logs sent automatically (2.8): raw records</td><td>30 days, then deleted automatically; also deleted when you withdraw or delete your account</td></tr>
+    <tr><td>Test play logs (2.8): summaries (scores, levels, statistics), if we create them</td><td>1 year [TO BE CONFIRMED]</td></tr>
     <tr><td>Tester email address</td><td>Until the test ends or you leave it</td></tr>
     <tr><td>Messages you send us</td><td>12 months</td></tr>
     <tr><td>Server logs (request details; account identifier only in the cases of Section 2.2)</td><td>30 days, also after you delete your account</td></tr>
@@ -146,19 +157,20 @@
     <li><strong>Statistics (18 and older):</strong> turn them off in <strong>Settings &rarr; Anonymous Usage Stats</strong>.</li>
     <li><strong>Purchases:</strong> restore a purchase through the store. To ask about refunds, contact Apple or Google.</li>
     <li><strong>Stop the play log:</strong> <strong>Settings → Send Play Log → Delete and withdraw</strong> removes the records and your agreement from the device.</li>
+    <li><strong>Test play logs (18 and older):</strong> withdraw at any time in Settings (Section 2.8); this deletes your logs on the server.</li>
     <li><strong>Delete your account:</strong> in the app, <strong>Settings → Delete Account &amp; Data</strong> deletes your account, your progress on our server and your data on that device. When you delete an account that uses Sign in with Apple, the app also asks Apple to revoke its sign-in for Skybloom; Apple may ask you to confirm with Face ID or your password first. A Google or Apple account can also be deleted on the web at <a href="https://jincoy.github.io/skybloom-prototype/delete-account.html">jincoy.github.io/skybloom-prototype/delete-account.html</a>. This cannot be undone.</li>
     <li><strong>Delete your data:</strong> deleting the app removes what is stored on your device, but not an account or progress saved on our server; delete those as above. To delete play-log files you sent us, or to be removed from the test, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a>. We act within 30 days.</li>
     <li><strong>Access and correction:</strong> you may ask what we hold about you and ask us to correct or delete it, as your local law allows. You may also complain to your local data protection authority.</li>
   </ul>
 
   <h2>7. Children</h2>
-  <p>If you choose "under 14" (or do not answer), the app <strong>does not connect to our server at all</strong>: no account (not even an anonymous guest account), no cloud save, no rankings, no Google or Apple sign-in. Everything stays on the device. The app keeps only the on-device game history of Section 2.1 (last 20 games), which is never sent to us for players under 14. It sends no statistics and puts no one in experiments (Section 2.6), it does not record the optional play log, does not show surveys, does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If an account was created on the device before this rule, it can still be deleted (Section 6). If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
+  <p>If you choose "under 14" (or do not answer), the app <strong>does not connect to our server at all</strong>: no account (not even an anonymous guest account), no cloud save, no rankings, no Google or Apple sign-in. Everything stays on the device. The app keeps only the on-device game history of Section 2.1 (last 20 games), which is never sent to us for players under 14. It sends no statistics and puts no one in experiments (Section 2.6), it does not record the optional play log or send test play logs (Section 2.8), does not show surveys, does not ask for contact details, and requests ads only as described in Section 2.3: marked as directed to children, limited to general-audience content, without Google's consent message or Apple's tracking prompt. If an account was created on the device before this rule, it can still be deleted (Section 6). If you believe a child under 14 has sent us information, email <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> and we will delete it.</p>
 
   <h2>8. Security and transfers</h2>
   <p>Play-log files you send us are kept in access-restricted storage and deleted on schedule. Accounts and saved progress are protected by Firebase security rules, so only you can read or change your own data. No system is perfectly secure; if a breach creates a real risk of serious harm, we will tell the people affected and the authorities as the law requires. We are based in the Republic of Korea. Saved progress is stored by Google Firebase in Seoul; Google, Apple and their partners may process information in other countries.</p>
 
   <h2>9. Changes</h2>
-  <p>When this policy changes, we update the date above. In-app purchases are described in Section 2.7. Earlier versions: [DATE TBD] (anonymous statistics, experiments and the remove-ads purchase added), 2026-10-26 (ad markings follow the child age treatment; the &ldquo;under the age of consent&rdquo; tag removed), 2026-10-25 (Sign in with Apple, on-device last 20 games, name reports need 10 different players, ad reward sentence; ad requests for players under 18 described as &ldquo;under the age of consent&rdquo;), 2026-10-24 (Google sign-in only; a reported name was hidden at once and blocked after 3 reports), 2026-10-22 (age groups under 14 / 14–17 / 18+, no accounts), 2026-10-21 (age groups under 13 / 13–17 / 18+, play log from 13), 2026-10-20 (no ads).</p>
+  <p>When this policy changes, we update the date above. In-app purchases are described in Section 2.7. Earlier versions: [DATE TBD] (anonymous statistics, experiments, the remove-ads purchase and automatic test play logs added), 2026-10-26 (ad markings follow the child age treatment; the &ldquo;under the age of consent&rdquo; tag removed), 2026-10-25 (Sign in with Apple, on-device last 20 games, name reports need 10 different players, ad reward sentence; ad requests for players under 18 described as &ldquo;under the age of consent&rdquo;), 2026-10-24 (Google sign-in only; a reported name was hidden at once and blocked after 3 reports), 2026-10-22 (age groups under 14 / 14–17 / 18+, no accounts), 2026-10-21 (age groups under 13 / 13–17 / 18+, play log from 13), 2026-10-20 (no ads).</p>
 
   <h2>개인정보처리방침 요약 (한국어)</h2>
   <p>이 방침은 TestFlight와 Google Play 테스트로 배포하는 Skybloom <strong>테스트 버전</strong>에 적용됩니다. 테스트 버전에는 원할 때만 보는 <strong>Google AdMob 보상형 광고</strong>(테스트 중에는 테스트 광고)와 선택형 <strong>계정·클라우드 저장</strong>(게스트, Google 로그인 또는 Apple로 로그인)이 있고, 앱 버전 [VERSION TBD]부터는 광고 제거 구매(1회)와 만 18세 이상의 익명 이용 통계가 추가됩니다.</p>
@@ -167,7 +179,7 @@
     <li>진행 보관과 다른 기기에서 이어 하기를 위해 Google Firebase(서울 리전)를 서버로 씁니다. 만 14세 이상 게스트는 무작위 ID의 익명 계정이고, Google로 로그인하면 Google 계정 ID·이메일·이름·프로필 사진을 받습니다. Apple로 로그인하면(iPhone·iPad와 웹 계정 삭제 페이지, Android 앱에는 없음) Apple 계정 ID와 이메일을 받고, 이메일 가리기를 고르면 Apple이 전달해 주는 대리 주소를 받습니다. 이름은 처음 로그인할 때 공유를 고른 경우에만 받고, 프로필 사진은 받지 않습니다. 서버에는 도감(발견한 아이템·보물), 장착 스킨, 꾸미기 배치, 설정, 마지막 저장 시각만 저장하며 골드 잔액은 보내지 않습니다. 계정을 삭제할 때까지 보관하며, 90일 동안 쓰지 않은 게스트 계정은 저장된 진행과 함께 자동 삭제합니다(Google·Apple 계정은 제외). <strong>만 14세 미만(또는 나이 미응답)은 서버에 전혀 연결하지 않습니다.</strong> 계정(익명 포함)·클라우드 저장·랭킹·로그인 없이 모든 정보가 기기에만 남습니다.</li>
     <li>광고를 볼 때 Google이 IP 주소(대략적 위치 추정), 기기·앱 정보, 광고 이용 기록, 기기 식별자를 받아 광고 제공·측정·부정 방지에 씁니다. 저희는 광고 식별자를 받지 않습니다. 동의나 추적을 거절해도 본 광고의 보상은 같습니다. 보상은 광고가 끝까지 나왔을 때만 받고, 광고를 불러오지 못하면(오프라인 등) 그때는 보상이 없습니다.</li>
     <li>18세 이상만 Google 동의 안내와 Apple 추적 허용 팝업을 봅니다. iPhone의 광고 식별자(IDFA)는 18세 이상이 "허용"을 누른 경우에만 전달됩니다. 18세 미만과 나이 미응답은 광고 요청에 Google의 어린이 연령 처리 표시가 붙고(만 14세 미만·미응답은 '어린이 대상' 표시도 함께) Google 정책에 따라 맞춤 광고에 쓰이지 않으며, 만 14세 미만·미응답은 전체 이용가 광고만 받습니다.</li>
-    <li>만 18세 이상이 동의한 경우에만 플레이 기록이 기기에 남고, 직접 파일을 만들어 공유할 때만 저희에게 전달됩니다. 플레이 테스트에 참여하지 않은 18세 이상도 설정 → 플레이 기록 보내기에서 최근 20판 기록 파일을 만들 수 있고, 이 파일도 직접 공유할 때만 전달됩니다. 받은 파일은 30일 뒤 삭제합니다.</li>
+    <li>만 18세 이상이 동의한 경우에만 플레이 기록이 기기에 남고, 직접 파일을 만들어 공유할 때만 저희에게 전달됩니다(테스트 버전의 자동 전송은 아래 별도 항목). 플레이 테스트에 참여하지 않은 18세 이상도 설정 → 플레이 기록 보내기에서 최근 20판 기록 파일을 만들 수 있고, 이 파일도 직접 공유할 때만 전달됩니다. 받은 파일은 30일 뒤 삭제합니다.</li>
     <li>추적은 iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 끌 수 있습니다.</li>
     <li>랭킹: 계정으로 판을 끝내면 판의 시드와 수를 서버로 보내 점수를 다시 계산해 확인하고, 판마다 점수·최고 건물·수의 개수·확인 여부·앱 버전·시각을 저장합니다. 확인된 최고 점수와 도감 수는 랭킹 이름과 함께 <strong>다른 플레이어에게 공개되는 랭킹</strong>(주간·전체 상위 100)에 나옵니다. <strong>랭킹 이름은 Google·Apple로 로그인한 계정만 정할 수 있고</strong>(1~16자), 게스트는 항상 "익명"으로 표시되며, 만 14세 미만·나이 미응답은 랭킹에 나오지 않습니다. 실명은 쓰지 마세요. 나이대는 별도 항목으로 서버에 보내거나 저장하지 않습니다. 다만 통계와 실험 라벨은 만 18세 이상에게만 생기므로, 그 존재로 계정이 18세 이상임을 알 수 있을 수 있습니다. 게임 기록은 90일, 주간 랭킹은 이번 주와 그 전 4주까지만 보관하고 자동 삭제합니다. 계정을 삭제하면 모든 랭킹에서 지워집니다.</li>
     <li>랭킹 이름 신고: 계정이 있는 플레이어는 다른 사람의 랭킹 이름을 신고할 수 있습니다(같은 플레이어는 1번, 하루 5번까지). 신고는 운영자가 검토합니다. 서로 다른 10명이 신고하면 그 이름은 모든 랭킹에서 지워져 "익명"으로 표시되고, 그 플레이어는 새 이름을 정할 수 있습니다. 규칙을 어긴 이름이면 운영자가 직접 판단해 이름 설정을 막을 수 있으며, 자동으로 막지는 않습니다. 신고된 계정에는 신고된 이름과 시각을 저장합니다. <strong>신고한 사람의 계정 ID는 신고와 함께 저장하지 않습니다.</strong> 같은 사람의 중복 신고를 막기 위해 신고자와 신고된 사람의 ID를 서버 비밀키로 변환한 값만 신고된 계정에 보관하며, 이 값은 비밀키 없이는 신고자 ID로 되돌릴 수 없고 신고자가 계정을 삭제해도 남습니다. 남용을 막기 위해 신고한 계정에 그날의 신고 횟수를 저장하고, 검토를 위해 서버 로그에 신고된 계정 ID·이름·신고자 수를 30일간 남깁니다.</li>
@@ -175,6 +187,7 @@
     <li>만 18세 이상 이용자는 게임이 쓰이는 방식(광고 제안의 노출·수락·거절, 아이템 사용, 튜토리얼 진행, 끝난 판 수)을 구간으로 묶은 숫자 합계만 서버로 보냅니다. 합계에는 계정 ID·기기 ID·이름이 없고, 판이 끝날 때 또는 앱을 나갈 때 한 번만 보내며 플레이 중에는 보내지 않습니다. 게임 개선을 위한 실험에서는 기기 안에만 있는 무작위 값으로 'A' 또는 'B'를 정하고, 이 라벨을 판 기록에 함께 저장해 다음 날 복귀율 등을 비교합니다. 만 18세 미만과 나이 미응답은 집계와 실험에 포함되지 않습니다. 설정 → 익명 이용 통계에서 끌 수 있습니다. 남용을 막기 위해 계정에 하루 전송 횟수를 저장합니다. 집계 합계는 기간 제한 없이 보관합니다.</li>
     <li>광고 제거 구매(1회): 결제는 Apple 또는 Google이 처리하며 저희는 카드 정보를 받지 않습니다. Google·Apple 계정으로 구매하면 서버에 구매 ID·상품·플랫폼(iPhone/Android)·시각·상태를 계정에 저장하고 영수증 원본은 저장하지 않습니다. 광고 제거 여부와 보너스 지급 여부도 계정에 저장하며 계정을 삭제할 때까지 보관합니다. 같은 구매로 보너스가 두 번 지급되지 않도록 "보너스 지급됨" 표시는 계정 ID 없이 구매 ID에서 만든 코드와 함께 영구 보관되며 계정을 삭제해도 남습니다. 구매 복원은 스토어를 통해 하고, 환불 문의는 Apple 또는 Google에 합니다.</li>
     <li>서버 기술 로그에 IP 주소·앱 식별 정보·호출한 기능 이름·상태·요청 크기와 시각을 30일간 보관합니다. 점수 확인에 실패한 판은 계정 ID·판 ID·사유가, 계정을 삭제하면 계정 ID와 삭제 사실이 같은 기간(30일) 로그에 남으며, 계정을 삭제해도 이 기간에는 로그가 남습니다.</li>
+    <li>테스트 버전에서 만 18세 이상이 로그인하고 직접 참여를 선택하면, 플레이하는 동안 약 20초마다 플레이 기록(터치 위치와 한 수 한 수, 점수·레벨, 광고 노출 단계, 화면 이동·머문 시간, 설정 변경, 선택 설문 답, 기기 종류·대략의 OS 버전·화면 크기·언어·시간대·성능 요약·앱 버전, 무작위 설치 ID·테스터 번호·로그인 계정 고유 ID)가 서버(Google Firebase, 서울 리전)로 전송됩니다. 이름·이메일은 기록에 넣지 않고, 동의 전에는 아무것도 보내지 않으며, 동의하지 않아도 게임은 같게 즐길 수 있습니다. 난이도·아이템·광고 시점 조정과 오류·성능 개선에만 쓰고 광고나 판매에 쓰지 않습니다. 원본은 30일 뒤 자동 삭제, 요약을 만들면 1년 보관[확인 필요]합니다. 설정에서 언제든 철회할 수 있고 철회하면 서버의 기록이 삭제됩니다(오프라인이면 다음 실행 때). 계정을 삭제해도 같이 삭제됩니다. 앱을 지운 경우 support@dreamhum.com으로 테스터 번호와 함께 요청하세요[연락처 확인 필요]. 앱이 확인한 나이가 만 18세 미만이면 기록하거나 전송하지 않습니다[문구 확인 필요: 서버는 나이를 확인하지 못함]. 처리 위탁: Google(Firebase/Google Cloud).</li>
     <li>삭제·문의: <a href="mailto:privacy@dreamhum.com">privacy@dreamhum.com</a> (30일 안에 처리)</li>
   </ul>
 </article>
